@@ -177,8 +177,8 @@
     </profiles>
     
     <scm>
-        <connection>scm:svn:http://anonsvn.jboss.org/repos/richfaces/root/ui/${category}/trunk/parent</connection>
-        <developerConnection>scm:svn:https://svn.jboss.org/repos/richfaces/root/ui/${category}/trunk/parent</developerConnection>
+        <connection>scm:svn:http://anonsvn.jboss.org/repos/richfaces/trunk/ui/${category}/parent</connection>
+        <developerConnection>scm:svn:https://svn.jboss.org/repos/richfaces/trunk/ui/${category}/parent</developerConnection>
         <url>http://fisheye.jboss.org/browse/richfaces</url>
     </scm>
 </project>

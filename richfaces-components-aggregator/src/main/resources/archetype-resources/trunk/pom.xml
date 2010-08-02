@@ -66,8 +66,8 @@
     </build>
 
     <scm>
-        <connection>scm:svn:http://anonsvn.jboss.org/repos/richfaces/root/ui/${category}/trunk</connection>
-        <developerConnection>scm:svn:https://svn.jboss.org/repos/richfaces/root/ui/${category}/trunk</developerConnection>
+        <connection>scm:svn:http://anonsvn.jboss.org/repos/richfaces/trunk/ui/${category}</connection>
+        <developerConnection>scm:svn:https://svn.jboss.org/repos/richfaces/trunk/ui/${category}</developerConnection>
         <url>http://fisheye.jboss.org/browse/richfaces</url>
     </scm>
 </project>

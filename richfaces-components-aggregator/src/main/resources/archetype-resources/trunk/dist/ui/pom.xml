@@ -198,8 +198,8 @@
     </profiles>
     
     <scm>
-        <connection>scm:svn:http://anonsvn.jboss.org/repos/richfaces/root/ui/${category}/trunk/dist/ui</connection>
-        <developerConnection>scm:svn:https://svn.jboss.org/repos/richfaces/root/ui/${category}/trunk/dist/ui</developerConnection>
+        <connection>scm:svn:http://anonsvn.jboss.org/repos/richfaces/trunk/ui/${category}/dist/ui</connection>
+        <developerConnection>scm:svn:https://svn.jboss.org/repos/richfaces/trunk/ui/${category}/dist/ui</developerConnection>
         <url>http://fisheye.jboss.org/browse/richfaces</url>
     </scm>
 </project>

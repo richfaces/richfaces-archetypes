@@ -95,8 +95,8 @@
     </profiles>
     
     <scm>
-        <connection>scm:svn:http://anonsvn.jboss.org/repos/richfaces/root/archetypes/richfaces-component/trunk</connection>
-        <developerConnection>scm:svn:https://svn.jboss.org/repos/richfaces/root/archetypes/richfaces-component/trunk</developerConnection>
+        <connection>scm:svn:http://anonsvn.jboss.org/repos/richfaces/trunk/archetypes/richfaces-component</connection>
+        <developerConnection>scm:svn:https://svn.jboss.org/repos/richfaces/trunk/archetypes/richfaces-component</developerConnection>
         <url>http://fisheye.jboss.org/browse/richfaces/</url>
     </scm>
 </project>

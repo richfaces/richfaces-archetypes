@@ -40,8 +40,8 @@
     </modules>
     
     <scm>
-        <connection>scm:svn:http://anonsvn.jboss.org/repos/richfaces/root/ui/${category}/trunk/${name}</connection>
-        <developerConnection>scm:svn:https://svn.jboss.org/repos/richfaces/root/ui/${category}/trunk/${name}</developerConnection>
+        <connection>scm:svn:http://anonsvn.jboss.org/repos/richfaces/trunk/ui/${category}/${name}</connection>
+        <developerConnection>scm:svn:https://svn.jboss.org/repos/richfaces/trunk/ui/${category}/${name}</developerConnection>
         <url>http://fisheye.jboss.org/browse/richfaces</url>
     </scm>
 </project>
