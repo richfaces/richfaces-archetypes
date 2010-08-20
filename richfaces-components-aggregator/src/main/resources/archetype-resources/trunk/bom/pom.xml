@@ -35,15 +35,14 @@
     <packaging>pom</packaging>
 
     <properties>
-        <org.richfaces.core.version>4.0.0-SNAPSHOT</org.richfaces.core.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>org.richfaces.core</groupId>
-                <artifactId>richfaces-core-bom</artifactId>
-                <version>${org.richfaces.core.version}</version>
+                <groupId>org.richfaces</groupId>
+                <artifactId>richfaces-bom</artifactId>
+                <version>${project.version}</version>
                 <scope>import</scope>
                 <type>pom</type>
             </dependency>

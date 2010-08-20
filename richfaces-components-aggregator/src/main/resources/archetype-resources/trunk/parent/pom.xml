@@ -36,14 +36,13 @@
 
     <properties>
         <richfaces.checkstyle.version>2</richfaces.checkstyle.version>
-        <org.richfaces.cdk.version>4.0.0-SNAPSHOT</org.richfaces.cdk.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>${groupId}.${category}</groupId>
-                <artifactId>richfaces-ui-${category}-bom</artifactId>
+                <groupId>org.richfaces</groupId>
+                <artifactId>richfaces-bom</artifactId>
                 <version>${project.version}</version>
                 <scope>import</scope>
                 <type>pom</type>
@@ -52,7 +51,7 @@
             <dependency>
                 <groupId>org.richfaces.cdk</groupId>
                 <artifactId>annotations</artifactId>
-                <version>${org.richfaces.cdk.version}</version>
+                <version>${project.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
@@ -64,7 +63,7 @@
                 <plugin>
                     <groupId>org.richfaces.cdk</groupId>
                     <artifactId>maven-cdk-plugin</artifactId>
-                    <version>${org.richfaces.cdk.version}</version>
+                    <version>${project.version}</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>

@@ -30,7 +30,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <org.richfaces.ui.version>4.0.0-SNAPSHOT</org.richfaces.ui.version>
+        <org.richfaces.bom.version>4.0.0-SNAPSHOT</org.richfaces.bom.version>
     </properties>
 
     <build>
@@ -129,8 +129,8 @@
         <dependencies>
             <dependency>
                 <groupId>org.richfaces.ui</groupId>
-                <artifactId>richfaces-ui-parent</artifactId>
-                <version>${org.richfaces.ui.version}</version>
+                <artifactId>richfaces-bom</artifactId>
+                <version>${org.richfaces.bom.version}</version>
                 <scope>import</scope>
                 <type>pom</type>
             </dependency>
