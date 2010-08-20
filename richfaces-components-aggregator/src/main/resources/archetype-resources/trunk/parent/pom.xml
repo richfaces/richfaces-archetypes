@@ -35,7 +35,7 @@
     <packaging>pom</packaging>
 
     <properties>
-        <richfaces.checkstyle.version>1</richfaces.checkstyle.version>
+        <richfaces.checkstyle.version>2</richfaces.checkstyle.version>
         <org.richfaces.cdk.version>4.0.0-SNAPSHOT</org.richfaces.cdk.version>
     </properties>
 
