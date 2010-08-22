@@ -49,4 +49,10 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
     
+    <scm>
+        <connection>scm:svn:http://anonsvn.jboss.org/repos/richfaces/trunk/archetypes</connection>
+        <developerConnection>scm:svn:https://svn.jboss.org/repos/richfaces/trunk/archetypes</developerConnection>
+        <url>http://fisheye.jboss.org/browse/richfaces/trunk/archetypes</url>
+    </scm>
+    
 </project>
