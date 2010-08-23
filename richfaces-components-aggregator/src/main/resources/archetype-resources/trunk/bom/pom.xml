@@ -30,7 +30,7 @@
 
     <groupId>${groupId}.${category}</groupId>
     <artifactId>richfaces-ui-${category}-bom</artifactId>
-    <version>4.0.0-SNAPSHOT</version>
+    <version>${version}</version>
     <name>Richfaces UI Components: ${category} bom</name>
     <packaging>pom</packaging>
 

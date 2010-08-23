@@ -24,7 +24,7 @@
     <parent>
         <groupId>${groupId}.${category}</groupId>
         <artifactId>richfaces-ui-${category}-parent</artifactId>
-        <version>4.0.0-SNAPSHOT</version>
+        <version>${version}</version>
         <relativePath>../parent/pom.xml</relativePath>
     </parent>
 

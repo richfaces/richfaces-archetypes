@@ -25,7 +25,7 @@
     <parent>
         <groupId>${groupId}.${category}</groupId>
         <artifactId>richfaces-ui-${category}-parent</artifactId>
-        <version>4.0.0-SNAPSHOT</version>
+        <version>${version}</version>
     </parent>
 
     <groupId>${groupId}.${category}</groupId>
