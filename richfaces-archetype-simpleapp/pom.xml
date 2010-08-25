@@ -11,7 +11,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.richfaces.archetypes</groupId>
     <artifactId>richfaces-archetype-simpleapp</artifactId>
-    <version>4.0.0.20100824-M2</version>
+    <version>4.0.0-SNAPSHOT</version>
     <packaging>maven-archetype</packaging>
     <name>RichFaces Archetypes: Simple Application</name>
 
@@ -78,9 +78,9 @@
     </profiles>
     
     <scm>
-        <connection>scm:svn:http://anonsvn.jboss.org/repos/richfaces/tags/4.0.0.20100824-M2/archetypes/richfaces-archetype-simpleapp</connection>
-        <developerConnection>scm:svn:https://svn.jboss.org/repos/richfaces/tags/4.0.0.20100824-M2/archetypes/richfaces-archetype-simpleapp</developerConnection>
-        <url>http://fisheye.jboss.org/browse/richfaces/tags/4.0.0.20100824-M2/archetypes/richfaces-archetype-simpleapp</url>
+        <connection>scm:svn:http://anonsvn.jboss.org/repos/richfaces/trunk/archetypes/richfaces-archetype-simpleapp</connection>
+        <developerConnection>scm:svn:https://svn.jboss.org/repos/richfaces/trunk/archetypes/richfaces-archetype-simpleapp</developerConnection>
+        <url>http://fisheye.jboss.org/browse/richfaces/</url>
     </scm>
 </project>
 
