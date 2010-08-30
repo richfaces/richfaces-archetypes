@@ -1,7 +1,7 @@
 package org.richfaces;
 
-import org.slf4j.LoggerFactory;
-import org.slf4j.Logger;
+import org.richfaces.log.LogFactory;
+import org.richfaces.log.Logger;
 
 import java.io.Serializable;
 
@@ -12,7 +12,7 @@ public class RichBean implements Serializable {
     private String name;
 
     public RichBean() {
-        logger = LoggerFactory.getLogger(RichBean.class);
+        logger = LogFactory.getLogger(RichBean.class);
         logger.info("post construct: initialize");
         name = "John";
     }
