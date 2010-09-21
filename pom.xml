@@ -39,6 +39,7 @@
         <module>richfaces-component</module>
         <module>richfaces-component-short</module>
         <module>richfaces-components-aggregator</module>
+        <module>rf-gae-sample</module>
     </modules>
 
     <properties>
