@@ -17,6 +17,10 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!-- Setting this property for resource filtering so that generated project
+             uses correct version of richfaces.
+         -->
+        <archetype.project.version>${project.version}</archetype.project.version>
     </properties>
 
     <build>
@@ -34,6 +38,12 @@
                 <extensions>true</extensions>
             </plugin>
         </plugins>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
     </build>
 
     <profiles>

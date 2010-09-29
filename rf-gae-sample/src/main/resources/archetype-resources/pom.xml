@@ -26,7 +26,10 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <org.richfaces.bom.version>4.0.0.20100826-M2</org.richfaces.bom.version>
+        <!-- Setting this property for resource filtering so that generated project
+             uses correct version of richfaces.
+         -->
+        <org.richfaces.bom.version>${archetype.project.version}</org.richfaces.bom.version>
     </properties>
 
     <build>
