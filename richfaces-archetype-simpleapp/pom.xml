@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <parent>
         <groupId>org.richfaces</groupId>
@@ -12,7 +11,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.richfaces.archetypes</groupId>
     <artifactId>richfaces-archetype-simpleapp</artifactId>
-    <version>4.0.0-SNAPSHOT</version>
+    <version>4.0.0.20100929-M3</version>
     <packaging>maven-archetype</packaging>
     <name>RichFaces Archetypes: Simple Application</name>
 
@@ -89,9 +88,9 @@
     </profiles>
 
     <scm>
-        <connection>scm:svn:http://anonsvn.jboss.org/repos/richfaces/trunk/archetypes/richfaces-archetype-simpleapp</connection>
-        <developerConnection>scm:svn:https://svn.jboss.org/repos/richfaces/trunk/archetypes/richfaces-archetype-simpleapp</developerConnection>
-        <url>http://fisheye.jboss.org/browse/richfaces/</url>
+        <connection>scm:svn:http://anonsvn.jboss.org/repos/richfaces/tags/4.0.0.20100929-M3/archetypes/richfaces-archetype-simpleapp</connection>
+        <developerConnection>scm:svn:https://svn.jboss.org/repos/richfaces/tags/4.0.0.20100929-M3/archetypes/richfaces-archetype-simpleapp</developerConnection>
+        <url>http://fisheye.jboss.org/browse/richfaces/tags/4.0.0.20100929-M3/archetypes/richfaces-archetype-simpleapp</url>
     </scm>
 </project>
 
