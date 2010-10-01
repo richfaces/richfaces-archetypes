@@ -39,6 +39,7 @@
             </plugin>
         </plugins>
         <resources>
+            <!-- Trigger filtering on resource directory -->
             <resource>
                 <directory>src/main/resources</directory>
                 <filtering>true</filtering>
