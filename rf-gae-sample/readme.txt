@@ -22,7 +22,7 @@ This archetype creates a simple RichFaces 4 application with all the settings an
 3) Then just execute appcfg from GAE SDK(link) to publish to your account:
 	appcfg update <PATH: "generated-application-target-folder/output application folder">  
 
-NOTE:Do not forget to register your own application name and make sure that the demo uses the same name accordingly. 
+NOTE:Do not forget to register your own application name and make sure that the demo uses the same name accordingly. By default the applications name is "rf-${artifactId}"
 
 
 4) now visit your application using http://<application-name>.appspot.com

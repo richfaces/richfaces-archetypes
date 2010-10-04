@@ -9,7 +9,7 @@ Project generated with richfaces-archetype-gae
 2) Then just execute appcfg from GAE SDK(link) to publish to your account:
 	appcfg update <PATH: "generated-application-target-folder/output application folder">  
 
-NOTE:Do not forget to register your own application name and make sure that the demo uses the same name accordingly. 
+NOTE:Do not forget to register your own application name and make sure that the demo uses the same name accordingly. By default the applications name is "rf-${artifactId}"
 
 
 3) now visit your application using http://<application-name>.appspot.com
@@ -31,8 +31,8 @@ com.sun.faces.enableThreading context parameter as GAE not allows threads.
 ============================================================================================================
 
 LOCAL DEPLOYMENT
-you still could deploy your application as usually using 
-1)	mvn clean install -Prelease
-2)	put to tomcat6 or jboss (war's for both application servers will be created)
-3) 	run choosen server
-4)      enjoy going to http:\\localhost:8080\<app-name>
+you still can deploy your application to a local tomcat instance. 
+1)	mvn clean install
+2)	put target war into tomcat6 webapp directory
+3) 	Launch tomcat 
+4)  Go to http:\\localhost:8080\<app-name>
