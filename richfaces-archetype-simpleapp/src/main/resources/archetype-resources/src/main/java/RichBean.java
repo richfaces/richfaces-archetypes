@@ -1,19 +1,17 @@
-package org.richfaces;
-
-import org.richfaces.log.LogFactory;
-import org.richfaces.log.Logger;
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+package ${package};
 
 import java.io.Serializable;
 
 public class RichBean implements Serializable {
 
     private static final long serialVersionUID = -2403138958014741653L;
-    private Logger logger;
     private String name;
 
     public RichBean() {
-        logger = LogFactory.getLogger(RichBean.class);
-        logger.info("post construct: initialize");
+        System.out.println("post construct: initialize");
         name = "John";
     }
 
