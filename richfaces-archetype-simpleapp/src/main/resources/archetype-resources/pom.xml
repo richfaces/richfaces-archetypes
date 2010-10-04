@@ -1,7 +1,6 @@
 #set( $symbol_pound = '#' )
 #set( $symbol_dollar = '$' )
-#set(
-$symbol_escape = '\' )
+#set($symbol_escape = '\' )
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
@@ -31,14 +30,14 @@ $symbol_escape = '\' )
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <!-- Setting this property for resource filtering so that generated project
-             uses correct version of richfaces.
+        <!-- Setting this property using archetype-metadata.xml requiredPorperty
+             so that generated project uses correct version of richfaces.
          -->
-        <org.richfaces.bom.version>${archetype.project.version}</org.richfaces.bom.version>
+        <org.richfaces.bom.version>${richfaces-version}</org.richfaces.bom.version>
     </properties>
 
     <build>
-        <finalName>${artifactId}-${symbol_dollar}{project.version}</finalName>
+        <finalName>${artifactId}-${project.version}</finalName>
         <plugins>
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -52,7 +51,7 @@ $symbol_escape = '\' )
                 <configuration>
                     <webResources>
                         <resource>
-                            <directory>${symbol_dollar}{basedir}/src/main/java</directory>
+                            <directory>${basedir}/src/main/java</directory>
                             <targetPath>/WEB-INF/src</targetPath>
                         </resource>
                     </webResources>
@@ -108,7 +107,7 @@ $symbol_escape = '\' )
                                     <goal>war</goal>
                                 </goals>
                                 <configuration>
-                                    <webappDirectory>${symbol_dollar}{project.build.directory}/${symbol_dollar}{project.build.finalName}-jee6</webappDirectory>
+                                    <webappDirectory>${project.build.directory}/${project.build.finalName}-jee6</webappDirectory>
                                     <classifier>jee6</classifier>
                                     <packagingExcludes>WEB-INF/lib/jsf-api*,WEB-INF/lib/jsf-impl*</packagingExcludes>
                                     <warSourceExcludes>WEB-INF/lib/jsf-api*,WEB-INF/lib/jsf-impl*</warSourceExcludes>
@@ -118,7 +117,7 @@ $symbol_escape = '\' )
                         <configuration>
                             <webResources>
                                 <resource>
-                                    <directory>${symbol_dollar}{basedir}/src/main/java</directory>
+                                    <directory>${basedir}/src/main/java</directory>
                                     <targetPath>/WEB-INF/src</targetPath>
                                 </resource>
                             </webResources>
