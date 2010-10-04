@@ -130,74 +130,6 @@
         </plugins>
     </build>
 
-    <profiles>
-        <profile>
-            <id>jee6</id>
-            <build>
-                <plugins>
-                    <plugin>
-                        <artifactId>maven-war-plugin</artifactId>
-                        <configuration>
-                            <webappDirectory>${project.build.directory}/${project.build.finalName}-jee6</webappDirectory>
-                        </configuration>
-                    </plugin>
-                </plugins>
-            </build>
-
-            <dependencies>
-                <dependency>
-                    <groupId>com.sun.faces</groupId>
-                    <artifactId>jsf-api</artifactId>
-                    <scope>provided</scope>
-                </dependency>
-                <dependency>
-                    <groupId>com.sun.faces</groupId>
-                    <artifactId>jsf-impl</artifactId>
-                    <scope>provided</scope>
-                </dependency>
-                <dependency>
-                    <groupId>javax.transaction</groupId>
-                    <artifactId>jta</artifactId>
-                    <version>1.1</version>
-                    <scope>provided</scope>
-                </dependency>
-            </dependencies>
-        </profile>
-        <profile>
-            <id>release</id>
-            <build>
-                <plugins>
-                    <plugin>
-                        <artifactId>maven-war-plugin</artifactId>
-                        <executions>
-                            <execution>
-                                <id>jee6</id>
-                                <phase>package</phase>
-                                <goals>
-                                    <goal>war</goal>
-                                </goals>
-                                <configuration>
-                                    <webappDirectory>${project.build.directory}/${project.build.finalName}-jee6</webappDirectory>
-                                    <classifier>jee6</classifier>
-                                    <packagingExcludes>WEB-INF/lib/jsf-api*,WEB-INF/lib/jsf-impl*</packagingExcludes>
-                                    <warSourceExcludes>WEB-INF/lib/jsf-api*,WEB-INF/lib/jsf-impl*</warSourceExcludes>
-                                </configuration>
-                            </execution>
-                        </executions>
-                        <configuration>
-                            <webResources>
-                                <resource>
-                                    <directory>${basedir}/src/main/java</directory>
-                                    <targetPath>/WEB-INF/src</targetPath>
-                                </resource>
-                            </webResources>
-                        </configuration>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>        
-    </profiles>
-
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -252,8 +184,8 @@
             <classifier>jdk15</classifier>
             <scope>test</scope>
         </dependency>
+        
 	<!-- GAE PROFILE DEPENDENCIES -->
-
          <dependency>
             <groupId>org.glassfish.web</groupId>
             <artifactId>el-impl</artifactId>
@@ -288,6 +220,5 @@
             <version>2.9.1</version>
             <scope>runtime</scope>
         </dependency>
-
     </dependencies>
 </project>
