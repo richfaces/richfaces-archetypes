@@ -30,6 +30,7 @@
              so that generated project uses correct version of richfaces.
          -->
         <org.richfaces.bom.version>${richfaces-version}</org.richfaces.bom.version>
+        <gae.version>1.4.0</gae.version>
     </properties>
 
     <build>
@@ -127,8 +128,62 @@
                     </execution>
                 </executions>
             </plugin>
+            <plugin>
+                <groupId>net.kindleit</groupId>
+                <artifactId>maven-gae-plugin</artifactId>
+                <version>0.7.3</version>
+                <dependencies>
+                    <dependency>
+                        <groupId>net.kindleit</groupId>
+                        <artifactId>gae-runtime</artifactId>
+                        <version>${gae.version}</version>
+                        <type>pom</type>
+                        <exclusions>
+                            <exclusion>
+                                <groupId>com.google.appengine.orm</groupId>
+                                <artifactId>jdo2-api</artifactId>
+                            </exclusion>
+                        </exclusions>
+                    </dependency>
+                </dependencies>
+            </plugin>
         </plugins>
     </build>
+
+    <profiles>
+        <profile>
+            <id>unpack-gae-sdk</id>
+            <activation>
+                <property>
+                    <name>!gae.home</name>
+                </property>
+            </activation>
+            <dependencies>
+                <dependency>
+                    <groupId>com.google.appengine</groupId>
+                    <artifactId>appengine-java-sdk</artifactId>
+                    <version>${gae.version}</version>
+                    <type>zip</type>
+                </dependency>
+            </dependencies>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>net.kindleit</groupId>
+                        <artifactId>maven-gae-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <phase>package</phase>
+                                <goals>
+                                    <goal>unpack</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
 
     <dependencyManagement>
         <dependencies>
@@ -146,6 +201,10 @@
         <dependency>
             <groupId>org.richfaces.ui</groupId>
             <artifactId>richfaces-components-ui</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.richfaces.core</groupId>
+            <artifactId>richfaces-core-impl</artifactId>
         </dependency>
 
         <dependency>

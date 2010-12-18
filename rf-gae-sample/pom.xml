@@ -8,6 +8,7 @@
         <relativePath>../../parent/pom.xml</relativePath>
     </parent>
 
+    <description>This archetype creates a simple RichFaces 4 application with all the settings and custom artifacts you need to perform deploy to GAE cloud</description>
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.richfaces.archetypes</groupId>
     <artifactId>richfaces-archetype-gae</artifactId>
