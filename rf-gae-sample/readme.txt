@@ -14,7 +14,7 @@ This archetype creates a simple RichFaces 4 application with all the settings an
 
 *BEFORE NEXT STEP:
   -- You should setup your GAE account at http://appspot.com
-  -- Register your new application there.  By default the applications name is "rf-${artifactId}" 
+  -- Register your new application there.  By default the applications name is "${artifactId}" 
   -- Download and install the GAE SDK for deployment and local server tools 
 
 3) Execute appcfg from GAE SDK to publish to your account:
