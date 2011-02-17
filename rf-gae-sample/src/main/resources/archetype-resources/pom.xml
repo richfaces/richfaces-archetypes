@@ -36,24 +36,6 @@
     <build>
         <finalName>${artifactId}</finalName>
         <plugins>
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>build-helper-maven-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <id>add-source</id>
-                        <phase>generate-sources</phase>
-                        <goals>
-                            <goal>add-source</goal>
-                        </goals>
-                        <configuration>
-                            <sources>
-                                <source>src/main/java-gae-jsf-ri</source>
-                            </sources>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
 
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -105,6 +87,10 @@
                                 <skin>ruby</skin>
                                 <skin>wine</skin>
                             </skins>
+                            <excludedFiles>
+                                <exclude>^\Qorg.richfaces.renderkit.html.images.\E.*</exclude>
+                                <exclude>^\Qorg.richfaces.renderkit.html.iconimages.\E.*</exclude>
+                            </excludedFiles>
                             <includedContentTypes>
                                 <include>application/javascript</include>
                                 <include>text/css</include>
@@ -208,12 +194,12 @@
         </dependency>
 
         <dependency>
-            <groupId>com.sun.faces</groupId>
-            <artifactId>jsf-api</artifactId>
+            <groupId>org.apache.myfaces.core</groupId>
+            <artifactId>myfaces-api</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.sun.faces</groupId>
-            <artifactId>jsf-impl</artifactId>
+            <groupId>org.apache.myfaces.core</groupId>
+            <artifactId>myfaces-impl</artifactId>
         </dependency>
         <dependency>
             <groupId>javax.servlet</groupId>
