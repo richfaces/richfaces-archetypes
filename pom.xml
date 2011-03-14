@@ -49,9 +49,9 @@
     </properties>
     
     <scm>
-        <connection>scm:svn:http://anonsvn.jboss.org/repos/richfaces/branches/4.0.X/archetypes</connection>
-        <developerConnection>scm:svn:https://svn.jboss.org/repos/richfaces/branches/4.0.X/archetypes</developerConnection>
-        <url>http://fisheye.jboss.org/browse/richfaces/branches/4.0.X/archetypes</url>
+        <connection>scm:svn:http://anonsvn.jboss.org/repos/richfaces/branches/RF-10753/archetypes</connection>
+        <developerConnection>scm:svn:https://svn.jboss.org/repos/richfaces/branches/RF-10753/archetypes</developerConnection>
+        <url>http://fisheye.jboss.org/browse/richfaces/branches/RF-10753/archetypes</url>
     </scm>
     
 </project>

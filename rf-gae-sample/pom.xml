@@ -93,9 +93,9 @@
     </profiles>
 
     <scm>
-        <connection>scm:svn:http://anonsvn.jboss.org/repos/richfaces/branches/4.0.X/archetypes/richfaces-archetype-simpleapp</connection>
-        <developerConnection>scm:svn:https://svn.jboss.org/repos/richfaces/branches/4.0.X/archetypes/richfaces-archetype-simpleapp</developerConnection>
-        <url>http://fisheye.jboss.org/browse/richfaces/branches/4.0.X/archetypes/richfaces-archetype-simpleapp</url>
+        <connection>scm:svn:http://anonsvn.jboss.org/repos/richfaces/branches/RF-10753/archetypes/richfaces-archetype-simpleapp</connection>
+        <developerConnection>scm:svn:https://svn.jboss.org/repos/richfaces/branches/RF-10753/archetypes/richfaces-archetype-simpleapp</developerConnection>
+        <url>http://fisheye.jboss.org/browse/richfaces/branches/RF-10753/archetypes/richfaces-archetype-simpleapp</url>
     </scm>
 </project>
 
