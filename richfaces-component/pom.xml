@@ -29,7 +29,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.richfaces.archetypes</groupId>
     <artifactId>richfaces-component</artifactId>
-    <version>4.0.0-SNAPSHOT</version>
+    <version>4.0.0.Final</version>
     <packaging>maven-archetype</packaging>
     <name>RichFaces Archetypes: Component</name>
 
@@ -96,9 +96,9 @@
     </profiles>
     
     <scm>
-        <connection>scm:svn:http://anonsvn.jboss.org/repos/richfaces/branches/4.0.X/archetypes/richfaces-component</connection>
-        <developerConnection>scm:svn:https://svn.jboss.org/repos/richfaces/branches/4.0.X/archetypes/richfaces-component</developerConnection>
-        <url>http://fisheye.jboss.org/browse/richfaces/branches/4.0.X/archetypes/richfaces-component</url>
+        <connection>scm:svn:http://anonsvn.jboss.org/repos/richfaces/tags/4.0.0.20110319-Final/archetypes/richfaces-component</connection>
+        <developerConnection>scm:svn:https://svn.jboss.org/repos/richfaces/tags/4.0.0.20110319-Final/archetypes/richfaces-component</developerConnection>
+        <url>http://fisheye.jboss.org/browse/richfaces/tags/4.0.0.20110319-Final/archetypes/richfaces-component</url>
     </scm>
 </project>
 
