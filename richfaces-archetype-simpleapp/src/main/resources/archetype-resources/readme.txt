@@ -2,15 +2,15 @@
 
                       RichFaces - Ajax enabled JSF 2.0 component library
 
-                                               	       RichFaces 4.0.CR1
-					      	    http://richfaces.org
+                                 RichFaces 4.0.0.Final ARCHETYPE PROJECT
+                                                    http://richfaces.org
                                                               March 2011
                      This software is distributed under the terms of the 
                             FSF Lesser Gnu Public License (see lgpl.txt)
 
 ========================================================================
 
-This project is an application generated with richfaces-achttype-simpleapp. 
+This project is an application generated with richfaces-archetype-simpleapp. 
 This file explains how to build and set up the project using Maven. If you
 find any issue related to RichFaces framework, please report the issue on
 the RichFaces user forum (http://community.jboss.org/en/richfaces) or
@@ -82,4 +82,4 @@ For more information on this project please contact the developer.
 For more information on RichFaces 4, please visit RichFaces 
 website at:
 
-    - http://www.jboss.org/richfaces.
+    - http://richfaces.org
