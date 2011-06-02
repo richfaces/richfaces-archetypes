@@ -16,15 +16,14 @@
     Fifth Floor, Boston, MA 02110-1301 USA, or see the FSF site:
     http://www.fsf.org.
 -->
-<archetype xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype/1.0.0"
-           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-           xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype/1.0.0 http://maven.apache.org/xsd/archetype-1.0.0.xsd">
+<archetype xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype/1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype/1.0.0 http://maven.apache.org/xsd/archetype-1.0.0.xsd">
 
     <id>richfaces-component</id>
 
     <!--<resources>-->
-        <!--<resource filtered="true">ui/pom.xml</resource>-->
-        <!--<resource filtered="true">api/pom.xml</resource>-->
-        <!--<resource filtered="true">impl/pom.xml</resource>-->
+    <!--<resource filtered="true">ui/pom.xml</resource>-->
+    <!--<resource filtered="true">api/pom.xml</resource>-->
+    <!--<resource filtered="true">impl/pom.xml</resource>-->
     <!--</resources>-->
 </archetype>

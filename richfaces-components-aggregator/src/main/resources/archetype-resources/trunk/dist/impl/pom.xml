@@ -16,7 +16,9 @@
     write to the Free Software Foundation, Inc., 51 Franklin St,
     Fifth Floor, Boston, MA 02110-1301 USA, or see the FSF site:
     http://www.fsf.org.
---><project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
 
@@ -57,7 +59,7 @@
             <artifactId>richfaces-ui-${artifactId}-api</artifactId>
             <version>${project.version}</version>
         </dependency>
-        
+
         <dependency>
             <groupId>${jsf2.api.groupid}</groupId>
             <artifactId>${jsf2.api.artifactid}</artifactId>
@@ -98,12 +100,11 @@
                         <artifactId>faces-shade-transformers</artifactId>
                         <version>${faces-shade-transformers.version}</version>
                     </dependency>
-                </dependencies>                
+                </dependencies>
             </plugin>
         </plugins>
     </build>
 
-    
     <profiles>
         <profile>
             <id>release</id>
@@ -150,7 +151,7 @@
             </build>
         </profile>
     </profiles>
-    
+
     <scm>
         <connection>scm:git:git://github.com/richfaces/components.git</connection>
         <developerConnection>scm:git:git@github.com:richfaces/components.git</developerConnection>

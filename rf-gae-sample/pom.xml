@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <parent>
         <groupId>org.richfaces</groupId>
@@ -8,7 +9,9 @@
         <relativePath>../../parent/pom.xml</relativePath>
     </parent>
 
-    <description>This archetype creates a simple RichFaces 4 application with all the settings and custom artifacts you need to perform deploy to GAE cloud</description>
+    <description>This archetype creates a simple RichFaces 4 application with all the settings and custom artifacts you need to
+        perform deploy to GAE cloud
+    </description>
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.richfaces.archetypes</groupId>
     <artifactId>richfaces-archetype-gae</artifactId>

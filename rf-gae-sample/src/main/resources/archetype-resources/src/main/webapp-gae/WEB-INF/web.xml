@@ -2,10 +2,9 @@
 #set( $symbol_dollar = '$' )
 #set( $symbol_escape = '\' )
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
-    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
-    id="richfaces-showcase" version="2.5">
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="richfaces-showcase"
+    version="2.5">
     <display-name>RichFaces 4 GAE application</display-name>
     <welcome-file-list>
         <welcome-file>index.jsp</welcome-file>
@@ -48,18 +47,20 @@
     </context-param>
     <context-param>
         <param-name>org.richfaces.staticResourceLocation</param-name>
-        <param-value>${symbol_pound}{facesContext.externalContext.requestContextPath}/static-resources/${symbol_pound}{resourceLocation}</param-value>
+        <param-value>
+            ${symbol_pound}{facesContext.externalContext.requestContextPath}/static-resources/${symbol_pound}{resourceLocation}
+        </param-value>
     </context-param>
-    
+
     <context-param>
         <param-name>org.ajax4jsf.cache.CACHE_MANAGER_FACTORY_CLASS</param-name>
         <param-value>org.ajax4jsf.cache.lru.LRUMapCacheFactory</param-value>
     </context-param>
-    
+
     <!-- 
        We need to set annotation lifecycyle provider manually as org.apache.myfaces.config.annotation.NoInjectionAnnotationLifecycleProvider.
        Other providers use some classes that are restricted on Google App Engine.   
-    -->  
+    -->
     <context-param>
         <param-name>org.apache.myfaces.config.annotation.LifecycleProvider</param-name>
         <param-value>org.apache.myfaces.config.annotation.NoInjectionAnnotationLifecycleProvider</param-value>
