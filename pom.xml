@@ -17,20 +17,21 @@
     Fifth Floor, Boston, MA 02110-1301 USA, or see the FSF site:
     http://www.fsf.org.
 -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
         <groupId>org.richfaces</groupId>
         <artifactId>richfaces-parent</artifactId>
-        <version>10</version>
+        <version>11</version>
         <relativePath>../parent/pom.xml</relativePath>
     </parent>
-    
+
     <groupId>org.richfaces.archetypes</groupId>
     <artifactId>archetypes-aggregator</artifactId>
-    <version>4.0.0.Final</version>
+    <version>4.1.0.20110805-M1</version>
     <packaging>pom</packaging>
     <name>RichFaces Archetypes: Aggregator</name>
 
@@ -47,11 +48,11 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
-    
+
     <scm>
-        <connection>scm:svn:http://anonsvn.jboss.org/repos/richfaces/tags/4.0.0.20110319-Final/archetypes</connection>
-        <developerConnection>scm:svn:https://svn.jboss.org/repos/richfaces/tags/4.0.0.20110319-Final/archetypes</developerConnection>
-        <url>http://fisheye.jboss.org/browse/richfaces/tags/4.0.0.20110319-Final/archetypes</url>
+        <connection>scm:git:git://github.com/richfaces/showcase.git</connection>
+        <developerConnection>scm:git:git@github.com:richfaces/showcase.git</developerConnection>
+        <url>https://github.com/richfaces/showcase</url>
     </scm>
-    
+
 </project>

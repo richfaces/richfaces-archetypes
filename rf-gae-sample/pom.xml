@@ -1,18 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <parent>
         <groupId>org.richfaces</groupId>
         <artifactId>richfaces-parent</artifactId>
-        <version>10</version>
+        <version>11</version>
         <relativePath>../../parent/pom.xml</relativePath>
     </parent>
 
-    <description>This archetype creates a simple RichFaces 4 application with all the settings and custom artifacts you need to perform deploy to GAE cloud</description>
+    <description>This archetype creates a simple RichFaces 4 application with all the settings and custom artifacts you need to
+        perform deploy to GAE cloud
+    </description>
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.richfaces.archetypes</groupId>
     <artifactId>richfaces-archetype-gae</artifactId>
-    <version>4.0.0.Final</version>
+    <version>4.1.0.20110805-M1</version>
     <packaging>maven-archetype</packaging>
     <name>RichFaces Archetypes: GAE Application</name>
 
@@ -93,9 +96,9 @@
     </profiles>
 
     <scm>
-        <connection>scm:svn:http://anonsvn.jboss.org/repos/richfaces/tags/4.0.0.20110319-Final/archetypes/richfaces-archetype-simpleapp</connection>
-        <developerConnection>scm:svn:https://svn.jboss.org/repos/richfaces/tags/4.0.0.20110319-Final/archetypes/richfaces-archetype-simpleapp</developerConnection>
-        <url>http://fisheye.jboss.org/browse/richfaces/tags/4.0.0.20110319-Final/archetypes/richfaces-archetype-simpleapp</url>
+        <connection>scm:git:git://github.com/richfaces/showcase.git</connection>
+        <developerConnection>scm:git:git@github.com:richfaces/showcase.git</developerConnection>
+        <url>https://github.com/richfaces/showcase</url>
     </scm>
 </project>
 

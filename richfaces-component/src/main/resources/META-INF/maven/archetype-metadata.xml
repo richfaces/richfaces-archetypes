@@ -18,9 +18,9 @@
     http://www.fsf.org.
 -->
 <archetype-descriptor xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0"
-                      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                      xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0 http://maven.apache.org/xsd/archetype-descriptor-1.0.0.xsd"
-                      name="richfaces-component" >
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0 http://maven.apache.org/xsd/archetype-descriptor-1.0.0.xsd"
+    name="richfaces-component">
 
     <requiredProperties>
         <requiredProperty key="groupId">
@@ -36,12 +36,12 @@
             <defaultValue>${category}-${name}</defaultValue>
         </requiredProperty>
         <requiredProperty key="version">
-            <defaultValue>4.0.0-SNAPSHOT</defaultValue>
+            <defaultValue>4.1.0.20110805-M1</defaultValue>
         </requiredProperty>
     </requiredProperties>
 
     <modules>
-        <module dir="api" >
+        <module dir="api">
             <fileSets>
                 <fileSet filtered="true">
                     <directory>/src/main/java</directory>
@@ -52,7 +52,7 @@
             </fileSets>
         </module>
 
-        <module dir="impl" >
+        <module dir="impl">
             <fileSets>
                 <fileSet filtered="true">
                     <directory>/src/main/java</directory>
@@ -63,7 +63,7 @@
             </fileSets>
         </module>
 
-        <module dir="ui" >
+        <module dir="ui">
             <fileSets>
                 <fileSet filtered="true">
                     <directory>/src/main/java</directory>
@@ -73,7 +73,7 @@
                 </fileSet>
             </fileSets>
         </module>
-        
+
     </modules>
 
 </archetype-descriptor>

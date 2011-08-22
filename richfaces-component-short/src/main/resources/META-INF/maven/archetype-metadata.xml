@@ -18,9 +18,9 @@
     http://www.fsf.org.
 -->
 <archetype-descriptor xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0"
-                      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                      xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0 http://maven.apache.org/xsd/archetype-descriptor-1.0.0.xsd"
-                      name="richfaces-component-short" >
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0 http://maven.apache.org/xsd/archetype-descriptor-1.0.0.xsd"
+    name="richfaces-component-short">
 
     <requiredProperties>
         <requiredProperty key="groupId">
@@ -36,7 +36,7 @@
             <defaultValue>${name}-ui</defaultValue>
         </requiredProperty>
         <requiredProperty key="version">
-            <defaultValue>4.0.0-SNAPSHOT</defaultValue>
+            <defaultValue>4.1.0.20110805-M1</defaultValue>
         </requiredProperty>
     </requiredProperties>
 

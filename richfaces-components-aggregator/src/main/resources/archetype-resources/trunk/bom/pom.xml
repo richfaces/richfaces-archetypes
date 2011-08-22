@@ -18,14 +18,15 @@
     http://www.fsf.org.
 -->
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
         <groupId>org.richfaces</groupId>
         <artifactId>richfaces-parent</artifactId>
-        <version>10</version>
+        <version>11</version>
     </parent>
 
     <groupId>${groupId}.${category}</groupId>
@@ -64,10 +65,10 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
-    
+
     <scm>
-        <connection>scm:svn:http://anonsvn.jboss.org/repos/richfaces/trunk/ui/${category}/bom</connection>
-        <developerConnection>scm:svn:https://svn.jboss.org/repos/richfaces/trunk/ui/${category}/bom</developerConnection>
-        <url>http://fisheye.jboss.org/browse/richfaces</url>
+        <connection>scm:git:git://github.com/richfaces/components.git</connection>
+        <developerConnection>scm:git:git@github.com:richfaces/components.git</developerConnection>
+        <url>https://github.com/richfaces/components</url>
     </scm>
 </project>
