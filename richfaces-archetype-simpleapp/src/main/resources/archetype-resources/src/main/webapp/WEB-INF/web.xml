@@ -26,10 +26,6 @@
     <session-config>
         <session-timeout>30</session-timeout>
     </session-config>
-    <mime-mapping>
-        <extension>ecss</extension>
-        <mime-type>text/css</mime-type>
-    </mime-mapping>
     <welcome-file-list>
         <welcome-file>faces/index.xhtml</welcome-file>
     </welcome-file-list>
