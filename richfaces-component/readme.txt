@@ -25,7 +25,7 @@ in such case will be created artifacts with:
     name     : <name>
     groupId  : org.richfaces.ui.<category>
     artifact : <category>-<name>
-    version  : 4.1.0.M3-SNAPSHOT 
+    version  : 4.1.0.20111014-M3 
 
 TODO link to wiki page
 TODO example with panels
