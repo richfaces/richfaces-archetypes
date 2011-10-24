@@ -31,7 +31,7 @@
     <groupId>${groupId}.${category}</groupId>
     <artifactId>richfaces-ui-${artifactId}-assembler</artifactId>
     <packaging>pom</packaging>
-    <name>Richfaces UI ${category} assembler</name>
+    <name>RichFaces UI ${category} assembler</name>
 
     <modules>
         <!-- aggregate modules -->
