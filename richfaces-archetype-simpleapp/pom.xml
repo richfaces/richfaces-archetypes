@@ -62,8 +62,8 @@
                 <jsf.api.groupId>javax.faces</jsf.api.groupId>
                 <jsf.api.artifactId>javax.faces-api</jsf.api.artifactId>
                 <jsf.api.scope>provided</jsf.api.scope>
-                <jsf.impl.groupId>com.sun.faces</jsf.impl.groupId>
-                <jsf.impl.artifactId>jsf-impl</jsf.impl.artifactId>
+                <jsf.impl.groupId>org.glassfish</jsf.impl.groupId>
+                <jsf.impl.artifactId>javax.faces</jsf.impl.artifactId>
                 <jsf.impl.scope>compile</jsf.impl.scope>
             </properties>
         </profile>
