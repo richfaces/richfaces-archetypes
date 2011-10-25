@@ -33,7 +33,7 @@
     <artifactId>archetypes-aggregator</artifactId>
     <version>4.1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
-    <name>RichFaces Archetypes: Aggregator</name>
+    <name>RichFaces Archetypes Aggregator</name>
 
     <modules>
         <module>richfaces-archetype-simpleapp</module>

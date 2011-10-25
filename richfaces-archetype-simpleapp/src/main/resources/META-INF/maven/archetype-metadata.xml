@@ -7,6 +7,24 @@
         <requiredProperty key="richfaces-version">
             <defaultValue>${project.version}</defaultValue>
         </requiredProperty>
+        <requiredProperty key="jsf-api-groupId">
+            <defaultValue>${jsf.api.groupId}</defaultValue>
+        </requiredProperty>
+        <requiredProperty key="jsf-api-artifactId">
+            <defaultValue>${jsf.api.artifactId}</defaultValue>
+        </requiredProperty>
+        <requiredProperty key="jsf-api-scope">
+            <defaultValue>${jsf.api.scope}</defaultValue>
+        </requiredProperty>
+        <requiredProperty key="jsf-impl-groupId">
+            <defaultValue>${jsf.impl.groupId}</defaultValue>
+        </requiredProperty>
+        <requiredProperty key="jsf-impl-artifactId">
+            <defaultValue>${jsf.impl.artifactId}</defaultValue>
+        </requiredProperty>
+        <requiredProperty key="jsf-impl-scope">
+            <defaultValue>${jsf.impl.scope}</defaultValue>
+        </requiredProperty>
     </requiredProperties>
     <fileSets>
         <fileSet filtered="true" packaged="true" encoding="UTF-8">
