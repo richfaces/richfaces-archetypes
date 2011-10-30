@@ -12,7 +12,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.richfaces.archetypes</groupId>
     <artifactId>richfaces-archetype-simpleapp</artifactId>
-    <version>4.1.0.20110910-M2</version>
+    <version>4.1.0.20111014-M3</version>
     <packaging>maven-archetype</packaging>
     <name>RichFaces Archetypes: Simple Application</name>
 
