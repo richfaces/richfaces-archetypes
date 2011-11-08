@@ -31,7 +31,7 @@
     <groupId>${groupId}</groupId>
     <artifactId>richfaces-ui-${category}-ui</artifactId>
     <packaging>jar</packaging>
-    <name>Richfaces UI ${category} ui</name>
+    <name>RichFaces UI ${category} ui</name>
 
     <properties>
         <assembly.projects.group>${groupId}.${category}</assembly.projects.group>

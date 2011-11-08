@@ -31,7 +31,7 @@
 
     <groupId>${groupId}.${category}</groupId>
     <artifactId>${name}-ui</artifactId>
-    <name>Richfaces UI Components: ${name} ui</name>
+    <name>RichFaces UI Components: ${name} ui</name>
     <packaging>jar</packaging>
 
     <dependencies>

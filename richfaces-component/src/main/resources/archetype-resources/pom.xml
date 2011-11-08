@@ -32,7 +32,7 @@
     <groupId>${groupId}.${category}</groupId>
     <artifactId>${artifactId}-aggregator</artifactId>
     <packaging>pom</packaging>
-    <name>Richfaces UI Components: ${artifactId} aggregator</name>
+    <name>RichFaces UI Components: ${artifactId} aggregator</name>
 
     <modules>
         <module>api</module>

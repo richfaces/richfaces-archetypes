@@ -32,7 +32,7 @@
     <groupId>${groupId}.${category}</groupId>
     <artifactId>richfaces-ui-${category}-parent</artifactId>
     <version>${version}</version>
-    <name>Richfaces UI Components: ${category} parent</name>
+    <name>RichFaces UI Components: ${category} parent</name>
     <packaging>pom</packaging>
 
     <properties>

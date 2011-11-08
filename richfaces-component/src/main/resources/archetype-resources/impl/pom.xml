@@ -32,7 +32,7 @@
 
     <groupId>${groupId}.${category}</groupId>
     <artifactId>${artifactId}-impl</artifactId>
-    <name>Richfaces UI Components: ${artifactId} impl</name>
+    <name>RichFaces UI Components: ${artifactId} impl</name>
     <packaging>jar</packaging>
 
     <dependencies>

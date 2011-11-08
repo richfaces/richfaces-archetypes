@@ -33,7 +33,7 @@
     <artifactId>${category}-aggregator</artifactId>
     <version>${version}</version>
     <packaging>pom</packaging>
-    <name>Richfaces UI Components: ${category} aggregator</name>
+    <name>RichFaces UI Components: ${category} aggregator</name>
 
     <modules>
         <module>bom</module>
