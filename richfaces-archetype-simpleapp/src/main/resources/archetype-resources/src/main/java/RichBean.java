@@ -5,13 +5,20 @@ package ${package};
 
 import java.io.Serializable;
 
+import javax.annotation.PostConstruct;
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.ViewScoped;
+
+@ViewScoped
+@ManagedBean
 public class RichBean implements Serializable {
 
-    private static final long serialVersionUID = -2403138958014741653L;
+    private static final long serialVersionUID = -6239437588285327644L;
+
     private String name;
 
-    public RichBean() {
-        System.out.println("post construct: initialize");
+    @PostConstruct
+    public void postContruct() {
         name = "John";
     }
 
