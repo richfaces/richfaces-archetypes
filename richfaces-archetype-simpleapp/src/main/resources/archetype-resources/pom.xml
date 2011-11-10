@@ -1,0 +1,196 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set($symbol_escape = '\' )
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>${groupId}</groupId>
+    <artifactId>${artifactId}</artifactId>
+    <name>RichFaces 4 Application</name>
+    <version>${version}</version>
+    <packaging>war</packaging>
+
+    <url>http://jboss.org/richfaces</url>
+
+    <repositories>
+        <repository>
+            <id>jboss-public-repository-group</id>
+            <name>Jboss Repository for Maven</name>
+            <url>https://repository.jboss.org/nexus/content/groups/public/</url>
+        </repository>
+        <repository>
+            <id>java-net</id>
+            <name>Java.net Maven Repository</name>
+            <url>http://download.java.net/maven/2</url>
+        </repository>
+    </repositories>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!-- Setting this property using archetype-metadata.xml requiredPorperty
+             so that generated project uses correct version of richfaces.
+         -->
+        <org.richfaces.bom.version>${richfaces-version}</org.richfaces.bom.version>
+    </properties>
+
+    <build>
+        <finalName>${artifactId}-${project.version}</finalName>
+        <plugins>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.5</source>
+                    <target>1.5</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <artifactId>maven-war-plugin</artifactId>
+                <configuration>
+                    <webResources>
+                        <resource>
+                            <directory>${basedir}/src/main/java</directory>
+                            <targetPath>/WEB-INF/src</targetPath>
+                        </resource>
+                    </webResources>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <profiles>
+        <profile>
+            <id>jee6</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <artifactId>maven-war-plugin</artifactId>
+                        <configuration>
+                            <webappDirectory>${project.build.directory}/${project.build.finalName}-jee6</webappDirectory>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+
+            <dependencies>
+                <dependency>
+                    <groupId>${jsf-api-groupId}</groupId>
+                    <artifactId>${jsf-api-artifactId}</artifactId>
+                    <scope>provided</scope>
+                </dependency>
+                <dependency>
+                    <groupId>${jsf-impl-groupId}</groupId>
+                    <artifactId>${jsf-impl-artifactId}</artifactId>
+                    <scope>provided</scope>
+                </dependency>
+                <dependency>
+                    <groupId>javax.transaction</groupId>
+                    <artifactId>jta</artifactId>
+                    <version>1.1</version>
+                    <scope>provided</scope>
+                </dependency>
+            </dependencies>
+        </profile>
+        <profile>
+            <id>release</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <artifactId>maven-war-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <id>jee6</id>
+                                <phase>package</phase>
+                                <goals>
+                                    <goal>war</goal>
+                                </goals>
+                                <configuration>
+                                    <webappDirectory>${project.build.directory}/${project.build.finalName}-jee6</webappDirectory>
+                                    <classifier>jee6</classifier>
+                                    <packagingExcludes>WEB-INF/lib/javax.faces*,WEB-INF/lib/jboss-jsf-api_2.1_spec*,WEB-INF/lib/jsf-impl*</packagingExcludes>
+                                    <warSourceExcludes>WEB-INF/lib/javax.faces*,WEB-INF/lib/jboss-jsf-api_2.1_spec*,WEB-INF/lib/jsf-impl*</warSourceExcludes>
+                                </configuration>
+                            </execution>
+                        </executions>
+                        <configuration>
+                            <webResources>
+                                <resource>
+                                    <directory>${basedir}/src/main/java</directory>
+                                    <targetPath>/WEB-INF/src</targetPath>
+                                </resource>
+                            </webResources>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.richfaces</groupId>
+                <artifactId>richfaces-bom</artifactId>
+                <version>${org.richfaces.bom.version}</version>
+                <scope>import</scope>
+                <type>pom</type>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.richfaces.ui</groupId>
+            <artifactId>richfaces-components-ui</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.richfaces.core</groupId>
+            <artifactId>richfaces-core-impl</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>${jsf-api-groupId}</groupId>
+            <artifactId>${jsf-api-artifactId}</artifactId>
+            <scope>${jsf-api-scope}</scope>
+        </dependency>
+        <dependency>
+            <groupId>${jsf-impl-groupId}</groupId>
+            <artifactId>${jsf-impl-artifactId}</artifactId>
+            <scope>${jsf-impl-scope}</scope>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>servlet-api</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet.jsp</groupId>
+            <artifactId>jsp-api</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>javax.el</groupId>
+            <artifactId>el-api</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet.jsp.jstl</groupId>
+            <artifactId>jstl-api</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>net.sf.ehcache</groupId>
+            <artifactId>ehcache</artifactId>
+        </dependency>
+
+        <!-- Tests -->
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>5.10</version>
+            <classifier>jdk15</classifier>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+</project>
