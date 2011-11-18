@@ -36,11 +36,11 @@
     <name>RichFaces Archetypes Aggregator</name>
 
     <modules>
-        <module>richfaces-archetype-simpleapp</module>
-        <module>richfaces-component</module>
-        <module>richfaces-component-short</module>
-        <module>richfaces-components-aggregator</module>
-        <module>rf-gae-sample</module>
+        <module>simpleapp</module>
+        <module>components/component</module>
+        <module>components/component-short</module>
+        <module>components/components-aggregator</module>
+        <module>gae</module>
     </modules>
 
     <properties>
