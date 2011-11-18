@@ -7,11 +7,19 @@
 
     <modelVersion>4.0.0</modelVersion>
 
+#if ($enterprise == "true" || $enterprise == "y" || $enterprise == "yes" )
+    <parent>
+        <groupId>org.jboss</groupId>
+        <artifactId>jboss-parent</artifactId>
+        <version>6-redhat-1</version>
+    </parent>
+#else
     <parent>
         <groupId>org.jboss</groupId>
         <artifactId>jboss-parent</artifactId>
         <version>6</version>
     </parent>
+#end
 
     <groupId>${groupId}</groupId>
     <artifactId>${artifactId}</artifactId>
