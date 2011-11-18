@@ -182,6 +182,7 @@
                         <artifactId>maven-war-plugin</artifactId>
                         <configuration>
                             <webappDirectory>${project.build.directory}/${project.build.finalName}-jee6</webappDirectory>
+                            <classifier>jee6</classifier>
                         </configuration>
                     </plugin>
                 </plugins>
