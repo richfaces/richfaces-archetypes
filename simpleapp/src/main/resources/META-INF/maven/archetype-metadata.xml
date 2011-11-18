@@ -5,6 +5,9 @@
     name="richfaces-archetype-simpleapp">
 
     <requiredProperties>
+        <requiredProperty key="useJBossRepositories">
+            <defaultValue>y</defaultValue>
+        </requiredProperty>
         <requiredProperty key="richfaces-version">
             <defaultValue>${project.version}</defaultValue>
         </requiredProperty>

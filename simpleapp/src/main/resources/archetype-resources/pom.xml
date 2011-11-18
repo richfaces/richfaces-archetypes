@@ -1,4 +1,3 @@
-
 #set( $symbol_pound = '#' )
 #set( $symbol_dollar = '$' )
 #set($symbol_escape = '\' )
@@ -22,13 +21,42 @@
 
     <url>http://jboss.org/richfaces</url>
 
+#if( $useJBossRepositories == "true" || $useJBossRepositories == "y" || $useJBossRepositories == "yes" )
     <repositories>
+        <!-- You should seriously consider using a repository manager or declare repositories in your settings.xml.
+           See http://www.sonatype.com/people/2009/02/why-putting-repositories-in-your-poms-is-a-bad-idea/   -->
         <repository>
             <id>jboss-public-repository-group</id>
-            <name>Jboss Repository for Maven</name>
-            <url>https://repository.jboss.org/nexus/content/groups/public/</url>
+            <name>JBoss Public Maven Repository Group</name>
+            <url>https://repository.jboss.org/nexus/content/groups/public-jboss/</url>
+            <layout>default</layout>
+            <releases>
+                <enabled>true</enabled>
+                <updatePolicy>never</updatePolicy>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>never</updatePolicy>
+            </snapshots>
         </repository>
     </repositories>
+    <pluginRepositories>
+        <pluginRepository>
+            <id>jboss-public-repository-group</id>
+            <name>JBoss Public Maven Repository Group</name>
+            <url>https://repository.jboss.org/nexus/content/groups/public-jboss/</url>
+            <layout>default</layout>
+            <releases>
+                <enabled>true</enabled>
+                <updatePolicy>never</updatePolicy>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>never</updatePolicy>
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories>
+#end
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
