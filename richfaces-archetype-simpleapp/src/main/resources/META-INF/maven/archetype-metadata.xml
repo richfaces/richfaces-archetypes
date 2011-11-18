@@ -3,27 +3,16 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0 http://maven.apache.org/xsd/archetype-descriptor-1.0.0.xsd"
     name="richfaces-archetype-simpleapp">
+
     <requiredProperties>
         <requiredProperty key="richfaces-version">
             <defaultValue>${project.version}</defaultValue>
         </requiredProperty>
-        <requiredProperty key="jsf-api-groupId">
-            <defaultValue>${jsf.api.groupId}</defaultValue>
+        <requiredProperty key="enterprise">
+            <defaultValue>n</defaultValue>
         </requiredProperty>
-        <requiredProperty key="jsf-api-artifactId">
-            <defaultValue>${jsf.api.artifactId}</defaultValue>
-        </requiredProperty>
-        <requiredProperty key="jsf-api-scope">
-            <defaultValue>${jsf.api.scope}</defaultValue>
-        </requiredProperty>
-        <requiredProperty key="jsf-impl-groupId">
-            <defaultValue>${jsf.impl.groupId}</defaultValue>
-        </requiredProperty>
-        <requiredProperty key="jsf-impl-artifactId">
-            <defaultValue>${jsf.impl.artifactId}</defaultValue>
-        </requiredProperty>
-        <requiredProperty key="jsf-impl-scope">
-            <defaultValue>${jsf.impl.scope}</defaultValue>
+        <requiredProperty key="richfaces-enterprise-version">
+            <defaultValue>4.1.0.Final-redhat-1</defaultValue>
         </requiredProperty>
     </requiredProperties>
     <fileSets>
