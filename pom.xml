@@ -36,6 +36,7 @@
     <name>RichFaces Archetypes Aggregator</name>
 
     <modules>
+        <module>richfaces-archetype-simpleapp</module>
         <module>richfaces-component</module>
         <module>richfaces-component-short</module>
         <module>richfaces-components-aggregator</module>
