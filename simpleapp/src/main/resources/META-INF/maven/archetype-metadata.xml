@@ -17,6 +17,9 @@
         <requiredProperty key="richfaces-enterprise-version">
             <defaultValue>4.1.0.Final-redhat-1</defaultValue>
         </requiredProperty>
+        <requiredProperty key="mobile-optimized">
+            <defaultValue>n</defaultValue>
+        </requiredProperty>
     </requiredProperties>
     <fileSets>
         <fileSet filtered="true" packaged="true" encoding="UTF-8">
@@ -30,6 +33,13 @@
             <includes>
                 <include>**/*.xhtml</include>
                 <include>**/*.xml</include>
+            </includes>
+        </fileSet>
+        <fileSet filtered="false" encoding="UTF-8">
+            <directory>src/main/webapp/resources</directory>
+            <includes>
+                <include>**/*.js</include>
+                <include>**/*.css</include>
             </includes>
         </fileSet>
         <fileSet encoding="UTF-8">

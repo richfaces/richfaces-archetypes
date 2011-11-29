@@ -10,6 +10,9 @@
         <resource>src/main/webapp/WEB-INF/faces-config.xml</resource>
         <resource>src/main/webapp/templates/template.xhtml</resource>
         <resource>src/main/webapp/index.xhtml</resource>
+        <resource>src/main/webapp/resources/css/mobile/rf-mobile-skin.css</resource>
+        <resource>src/main/webapp/resources/css/mobile/slidfast.css</resource>
+        <resource>src/main/webapp/resources/js/mobile/slidfast.js</resource>
         <resource>readme.txt</resource>
     </resources>
 </archetype>
