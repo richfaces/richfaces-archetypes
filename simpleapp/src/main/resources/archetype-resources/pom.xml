@@ -15,7 +15,7 @@
 
     <url>http://jboss.org/richfaces</url>
 
-#if( $useJBossRepositories == "true" || $useJBossRepositories == "y" || $useJBossRepositories == "yes" )
+#if (( $useJBossRepositories == "true" || $useJBossRepositories == "y" || $useJBossRepositories == "yes" ) && !($enterprise == "true" || $enterprise == "y" || $enterprise == "yes" ))
     <repositories>
         <!-- You should seriously consider using a repository manager or declare repositories in your settings.xml.
            See http://www.sonatype.com/people/2009/02/why-putting-repositories-in-your-poms-is-a-bad-idea/   -->
