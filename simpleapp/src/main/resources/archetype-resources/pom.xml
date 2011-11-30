@@ -7,20 +7,6 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-#if ($enterprise == "true" || $enterprise == "y" || $enterprise == "yes" )
-    <parent>
-        <groupId>org.jboss</groupId>
-        <artifactId>jboss-parent</artifactId>
-        <version>6-redhat-1</version>
-    </parent>
-#else
-    <parent>
-        <groupId>org.jboss</groupId>
-        <artifactId>jboss-parent</artifactId>
-        <version>6</version>
-    </parent>
-#end
-
     <groupId>${groupId}</groupId>
     <artifactId>${artifactId}</artifactId>
     <name>RichFaces 4 Application</name>
@@ -83,6 +69,7 @@
         <plugins>
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
+                <version>2.3.1</version>
                 <configuration>
                     <source>${maven.compiler.source}</source>
                     <target>${maven.compiler.target}</target>
@@ -90,6 +77,7 @@
             </plugin>
             <plugin>
                 <artifactId>maven-war-plugin</artifactId>
+                <version>2.1.1</version>
             </plugin>
         </plugins>
     </build>
