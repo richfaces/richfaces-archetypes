@@ -31,16 +31,16 @@
 
     <groupId>org.richfaces.archetypes</groupId>
     <artifactId>archetypes-aggregator</artifactId>
-    <version>4.1.0-SNAPSHOT</version>
+    <version>4.1.0.CR2</version>
     <packaging>pom</packaging>
     <name>RichFaces Archetypes Aggregator</name>
 
     <modules>
-        <module>richfaces-archetype-simpleapp</module>
-        <module>richfaces-component</module>
-        <module>richfaces-component-short</module>
-        <module>richfaces-components-aggregator</module>
-        <module>rf-gae-sample</module>
+        <module>simpleapp</module>
+        <module>components/component</module>
+        <module>components/component-short</module>
+        <module>components/components-aggregator</module>
+        <module>gae</module>
     </modules>
 
     <properties>
@@ -50,9 +50,9 @@
     </properties>
 
     <scm>
-        <connection>scm:git:git://github.com/richfaces/showcase.git</connection>
-        <developerConnection>scm:git:git@github.com:richfaces/showcase.git</developerConnection>
-        <url>https://github.com/richfaces/showcase</url>
+        <connection>scm:git:git://github.com/richfaces/archetypes.git</connection>
+        <developerConnection>scm:git:git@github.com:richfaces/archetypes.git</developerConnection>
+        <url>https://github.com/richfaces/archetypes</url>
     </scm>
 
 </project>
