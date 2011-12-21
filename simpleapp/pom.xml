@@ -15,10 +15,6 @@
     <packaging>maven-archetype</packaging>
     <name>RichFaces Archetypes Simple Application</name>
 
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
-
     <build>
         <extensions>
             <extension>
