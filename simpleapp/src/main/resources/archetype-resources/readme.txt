@@ -10,7 +10,7 @@
 
 ========================================================================
 
-This project is an application generated with richfaces-archetype-simpleapp. 
+This archetype will create a basic application generated with richfaces.
 This file explains how to build and set up the project using Maven. If you
 find any issue related to RichFaces framework, please report the issue on
 the RichFaces user forum (http://community.jboss.org/en/richfaces) or
@@ -28,14 +28,27 @@ In order to build the Examples applications you will need:
       (e.g. Jboss AS 6)
     - JDK 1.6
 
-Also optional Additional Software would make it easy for you to work 
+Also optional additional Software would make it easy for you to work 
 with the sources of the application:
 
     - Eclipse IDE + JBoss Tools (to explore and run the application 
       in IDE). You're obviously free to use any other IDE you wish, but
       JBoss Tools is recommended. 
 
-2. Build/Deploy
+2. Generate the project using the archetype.
+
+Maven will automatically create a project for you using the archetype
+command below.  Just provide the variables and maven will do the rest.
+
+   mvn archetype:generate \
+       -DarchetypeGroupId=org.richfaces.archetypes \
+       -DarchetypeArtifactId=richfaces-archetype-simpleapp \
+       -DarchetypeVersion=4.2.0.CR1 \
+       -DgroupId=<yourGroupId> \
+       -DartifactId=<yourArtifactId> \
+       -Dversion=<yourSnapshotVersion>
+
+3. Build/Deploy
 
     - Deploying on Tomcat
 

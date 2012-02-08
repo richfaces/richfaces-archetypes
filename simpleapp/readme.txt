@@ -43,7 +43,7 @@ command below.  Just provide the variables and maven will do the rest.
    mvn archetype:generate \
        -DarchetypeGroupId=org.richfaces.archetypes \
        -DarchetypeArtifactId=richfaces-archetype-simpleapp \
-       -DarchetypeVersion=4.1.0.Final \
+       -DarchetypeVersion=4.2.0.CR1 \
        -DgroupId=<yourGroupId> \
        -DartifactId=<yourArtifactId> \
        -Dversion=<yourSnapshotVersion>
