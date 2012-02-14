@@ -2,7 +2,7 @@
 
                       RichFaces - Ajax enabled JSF 2.0 component library
 
-                                 RichFaces 4.0.0.Final ARCHETYPE PROJECT
+                                 RichFaces 4.2.0-SNAPSHOT ARCHETYPE PROJECT
                                                     http://richfaces.org
                                                               March 2011
                      This software is distributed under the terms of the 
@@ -23,9 +23,9 @@ SETTING UP THE APPLICATION
 1. Requirements
 
 In order to build the Examples applications you will need:
-    - Maven 2.1.0 or later
+    - Maven 3.0.x or later
     - Servers: Apache Tomcat 6.0 or any JEE6 application server 
-      (e.g. Jboss AS 6)
+      (e.g. Jboss AS 7/EAP6)
     - JDK 1.6
 
 Also optional additional Software would make it easy for you to work 
