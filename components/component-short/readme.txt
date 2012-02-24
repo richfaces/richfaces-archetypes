@@ -16,7 +16,7 @@ in such case will be created artifacts with:
     name     : <name>
     groupId  : org.richfaces.ui.<category>
     artifact : <category>-<name>
-    version  : 4.2.0.CR1 
+    version  : 4.2.0.Final 
 
 TODO link to wiki page
 TODO example with panels
