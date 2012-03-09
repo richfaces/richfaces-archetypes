@@ -5,8 +5,7 @@
     <parent>
         <groupId>org.richfaces</groupId>
         <artifactId>richfaces-root-parent</artifactId>
-        <version>4.3.0-SNAPSHOT</version>
-        <relativePath>../../build/parent/pom.xml</relativePath>
+        <version>4.2.0.Final</version>
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
@@ -14,6 +13,24 @@
     <artifactId>richfaces-archetype-simpleapp</artifactId>
     <packaging>maven-archetype</packaging>
     <name>RichFaces Archetypes Simple Application</name>
+    <version>4.2.0.Final-1-SNAPSHOT</version>
+
+    <properties>
+        <richfaces-default-version>4.2.0.Final</richfaces-default-version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- RichFaces BOM Import -->
+            <dependency>
+                <groupId>org.richfaces</groupId>
+                <artifactId>richfaces-bom</artifactId>
+                <version>${richfaces-default-version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
     <build>
         <extensions>

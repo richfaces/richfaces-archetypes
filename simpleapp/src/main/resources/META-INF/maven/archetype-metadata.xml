@@ -9,7 +9,7 @@
             <defaultValue>y</defaultValue>
         </requiredProperty>
         <requiredProperty key="richfaces-version">
-            <defaultValue>${project.version}</defaultValue>
+            <defaultValue>${richfaces-default-version}</defaultValue>
         </requiredProperty>
         <requiredProperty key="enterprise">
             <defaultValue>n</defaultValue>
