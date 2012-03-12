@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <parent>
+        <groupId>org.richfaces</groupId>
+        <artifactId>richfaces-root-parent</artifactId>
+        <version>4.2.0.Final</version>
+    </parent>
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.richfaces.archetypes</groupId>
+    <artifactId>richfaces-archetype-kitchensink</artifactId>
+    <packaging>maven-archetype</packaging>
+    <name>RichFaces Archetypes Kitchen Sink Application</name>
+    <version>4.2.0.Final-1-SNAPSHOT</version>
+
+    <properties>
+        <richfaces-default-version>4.2.0.Final</richfaces-default-version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- RichFaces BOM Import -->
+            <dependency>
+                <groupId>org.richfaces</groupId>
+                <artifactId>richfaces-bom</artifactId>
+                <version>${richfaces-default-version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <extensions>
+            <extension>
+                <groupId>org.apache.maven.archetype</groupId>
+                <artifactId>archetype-packaging</artifactId>
+                <version>2.0-alpha-4</version>
+            </extension>
+        </extensions>
+        <plugins>
+            <plugin>
+                <artifactId>maven-archetype-plugin</artifactId>
+                <version>2.0-alpha-4</version>
+                <extensions>true</extensions>
+            </plugin>
+        </plugins>
+        <resources>
+            <!-- Selectively trigger filtering on resource directory 
+                 The second element turns on filtering only for META-INF directory
+            -->
+            <resource>
+                <directory>src/main/resources/</directory>
+                <filtering>false</filtering>
+            </resource>
+            <resource>
+                <directory>src/main/resources/META-INF/maven</directory>
+                <filtering>true</filtering>
+                <targetPath>META-INF/maven</targetPath>
+            </resource>
+        </resources>
+    </build>
+
+    <scm>
+        <connection>scm:git:git://github.com/richfaces/archetypes.git</connection>
+        <developerConnection>scm:git:git@github.com:richfaces/archetypes.git</developerConnection>
+        <url>https://github.com/richfaces/archetypes</url>
+    </scm>
+</project>
+

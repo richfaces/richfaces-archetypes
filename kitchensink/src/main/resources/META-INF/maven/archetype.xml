@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<archetype>
+    <id>richfaces-archetype-simpleapp</id>
+    <sources>
+        <source>src/main/java/RichBean.java</source>
+    </sources>
+    <resources>
+        <resource>src/main/webapp/META-INF/MANIFEST.MF</resource>
+        <resource>src/main/webapp/WEB-INF/web.xml</resource>
+        <resource>src/main/webapp/WEB-INF/faces-config.xml</resource>
+        <resource>src/main/webapp/templates/template.xhtml</resource>
+        <resource>src/main/webapp/index.xhtml</resource>
+        <resource>src/main/webapp/resources/css/mobile/rf-mobile-skin.css</resource>
+        <resource>src/main/webapp/resources/css/mobile/slidfast.css</resource>
+        <resource>src/main/webapp/resources/js/mobile/slidfast.js</resource>
+        <resource>readme.txt</resource>
+    </resources>
+</archetype>
