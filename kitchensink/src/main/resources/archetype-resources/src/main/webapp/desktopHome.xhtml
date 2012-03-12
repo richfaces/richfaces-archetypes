@@ -2,15 +2,15 @@
 #set( $symbol_dollar = '$' )
 #set( $symbol_escape = '\' )
 <!DOCTYPE html>
-<html lang="en"
-      xmlns:ui="http://java.sun.com/jsf/facelets"
-      xmlns:f="http://java.sun.com/jsf/core"
-      xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:a4j="http://richfaces.org/a4j"
-      xmlns:rich="http://richfaces.org/rich"
-      xmlns:my="http://java.sun.com/jsf/composite/components">
+<html lang="en">
 
-<ui:composition template="/WEB-INF/templates/desktop.xhtml">
+<ui:composition template="/WEB-INF/templates/desktop.xhtml"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:a4j="http://richfaces.org/a4j"
+                xmlns:rich="http://richfaces.org/rich"
+                xmlns:my="http://java.sun.com/jsf/composite/components">
     <ui:define name="content">
        <h:outputStylesheet name="app.css" library="css"/>
        <h:outputScript target="head" name="showMessage.js" library="js"/>
