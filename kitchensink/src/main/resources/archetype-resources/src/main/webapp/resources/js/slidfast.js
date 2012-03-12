@@ -72,7 +72,7 @@
 
             hideURLBar: function() {
                 //hide the url bar on mobile devices
-                setTimeout(scrollTo, 0, 0, 1)
+                setTimeout(scrollTo, 100, 0, 1)
             },
 
             slideTo :   function (id) {
@@ -101,6 +101,8 @@
 
                 //5. Bring in the new page and set the global.
                 focusPage.className = 'page transition stage-center';
+
+                slidfast.core.hideURLBar();
             },
 
             init: function() {
