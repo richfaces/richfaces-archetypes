@@ -51,14 +51,12 @@ Mobile Device Page Setup
 #page-container {
     position:absolute;
     top: 44px;
-    width:100%;
-    height: 100%;
+   width:100%;
 }
 
 .page {
     position: absolute;
-    width: 100%;
-    height: 100%;
+   width:100%;
     top: 0;
     /*activate the GPU for compositing each page */
     -webkit-transform: translate3d(0, 0, 0);
@@ -124,56 +122,11 @@ Device Specific Styles
     overflow: hidden;
     opacity: 0;
 }
-/* iOS/android phone landscape screen width*/
-@media screen and (max-device-width: 480px) and (orientation:landscape) {
-    .stage-left {
-        left: -480px;
-    }
 
-    .stage-right {
-        left: 480px;
-    }
+.stage-left {
+    left: -100%;
 }
 
-@media screen and (max-device-width: 480px) and (orientation:portrait) {
-    .stage-left {
-        left: -320px;
-    }
-
-    .stage-right {
-        left: 320px;
-    }
-}
-
-@media screen and (min-device-width: 600px) and (orientation:portrait) {
-    .stage-left {
-        left: -600px;
-    }
-
-    .stage-right {
-        left: 600px;
-    }
-}
-
-/* iOS/android phone portrait screen width*/
-@media screen and (max-device-width: 320px) {
-    .stage-left {
-        left: -320px;
-    }
-
-    .stage-right {
-        left: 320px;
-    }
-}
-
-/*catch all for at or larger than handheld landscape device widths*/
-@media screen and (min-device-width: 1000px) {
-    .stage-left {
-        left: -1024px;
-    }
-
-    .stage-right {
-        left: 1024px;
-    }
-
+.stage-right {
+    left: 100%;
 }

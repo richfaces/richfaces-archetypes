@@ -1,0 +1,19 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:a4j="http://richfaces.org/a4j"
+      xmlns:rich="http://richfaces.org/rich"
+      xmlns:my="http://java.sun.com/jsf/composite/components">
+
+<ui:composition>
+   <h:panelGroup id="memberDetailPanel" layout="block" styleClass="mobileContent">
+      <my:memberForm member="${symbol_pound}{member}"/>
+   </h:panelGroup>
+</ui:composition>
+
+</html>

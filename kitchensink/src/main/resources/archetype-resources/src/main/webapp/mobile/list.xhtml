@@ -1,0 +1,53 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:a4j="http://richfaces.org/a4j"
+      xmlns:rich="http://richfaces.org/rich"
+      xmlns:my="http://java.sun.com/jsf/composite/components">
+
+<ui:composition>
+   <h:panelGroup id="membersPanel" layout="block">
+      <h:outputScript target="head" name="showMessage.js" library="js"/>
+      <rich:dataTable var="_member" value="${symbol_pound}{members}" rendered="${symbol_pound}{not empty members}" style="width : 100%">
+         <rich:column>
+            <a4j:commandLink styleClass="no-decor" render="@form" execute="@this"
+                             oncomplete="location.hash='detail-page'">
+               View
+               <f:setPropertyActionListener target="${symbol_pound}{memberRegistration.member}" value="${symbol_pound}{_member}"/>
+            </a4j:commandLink>
+         </rich:column>
+         <rich:column>
+            <f:facet name="header">Id</f:facet>
+            ${symbol_pound}{_member.id}
+         </rich:column>
+         <rich:column>
+            <f:facet name="header">Name</f:facet>
+            ${symbol_pound}{_member.name}
+         </rich:column>
+         <rich:column>
+            <f:facet name="header">Email</f:facet>
+            ${symbol_pound}{_member.email}
+         </rich:column>
+         <rich:column>
+            <f:facet name="header">Phone ${symbol_pound}</f:facet>
+            ${symbol_pound}{_member.phoneNumber}
+         </rich:column>
+         <f:facet name="footer">
+            REST URL for all members: <a href="${symbol_pound}{request.contextPath}/rest/members">/rest/members</a>
+         </f:facet>
+      </rich:dataTable>
+   </h:panelGroup>
+   <div id="newMemberMessages" class="update"/>
+
+   <a4j:push address="pushCdi" ondataavailable="showMessage(event.rf.data)">
+      <a4j:ajax event="dataavailable" render="membersPanel" />
+   </a4j:push>
+
+</ui:composition>
+
+</html>

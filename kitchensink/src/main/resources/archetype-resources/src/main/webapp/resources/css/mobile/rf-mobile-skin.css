@@ -97,6 +97,7 @@ Page Formatting - Skin
 
 .right-header-button {
    right: 5px;
+   left : auto;
 }
 
 .basic-button {
@@ -114,7 +115,7 @@ Page Formatting - Skin
     opacity: 0;
 }
 
-div#browser > header > div {
+div#browser  header > div {
    position: relative;
    height: 44px;
    width: auto;
@@ -374,7 +375,7 @@ td.acent {
 /*************************************************
 rich:tree
 *************************************************/
-.rf-trn-hnd-exp, .rf-trn-hnd-colps {
+.rf-trn-hnd {
     padding: 3px;
     border-radius: 3px;
     -moz-border-radius: 3px;
