@@ -13,7 +13,7 @@
     <artifactId>richfaces-archetype-simpleapp</artifactId>
     <packaging>maven-archetype</packaging>
     <name>RichFaces Archetypes Simple Application</name>
-    <version>4.2.0.Final-2</version>
+    <version>4.2.0.Final-3-SNAPSHOT</version>
 
     <properties>
         <richfaces-default-version>4.2.0.Final</richfaces-default-version>
