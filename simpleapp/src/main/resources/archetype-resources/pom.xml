@@ -112,6 +112,25 @@
             <artifactId>jsf-impl</artifactId>
             <scope>compile</scope>
         </dependency>
+        <dependency>
+            <groupId>org.jboss.spec.javax.servlet</groupId>
+            <artifactId>jboss-servlet-api_3.0_spec</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.jboss.spec.javax.servlet.jsp</groupId>
+            <artifactId>jboss-jsp-api_2.2_spec</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.jboss.spec.javax.el</groupId>
+            <artifactId>jboss-el-api_2.2_spec</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.jboss.spec.javax.servlet.jstl</groupId>
+            <artifactId>jboss-jstl-api_1.2_spec</artifactId>
+        </dependency>
 #else
         <dependency>
             <groupId>javax.faces</groupId>
@@ -123,7 +142,6 @@
             <artifactId>javax.faces</artifactId>
             <scope>compile</scope>
         </dependency>
-#end
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
@@ -143,6 +161,7 @@
             <groupId>javax.servlet.jsp.jstl</groupId>
             <artifactId>jstl-api</artifactId>
         </dependency>
+#end
 
         <dependency>
             <groupId>net.sf.ehcache</groupId>
