@@ -16,31 +16,24 @@ import javax.inject.Inject;
 import javax.inject.Named;
 import javax.persistence.EntityManager;
 
+import ${package}.service.MemberRegistration;
 import ${package}.model.Member;
 import org.richfaces.cdi.push.Push;
 
-// The @Stateful annotation eliminates the need for manual transaction demarcation
-@Stateful
 // The @Model stereotype is a convenience mechanism to make this a request-scoped bean that has an
 // EL name
 // Read more about the @Model stereotype in this FAQ:
 // http://sfwk.org/Documentation/WhatIsThePurposeOfTheModelAnnotation
 @Model
-public class MemberRegistration {
+public class MemberController {
 
    public static final String PUSH_CDI_TOPIC = "pushCdi";
-
-   @Inject
-   private Logger log;
 
    @Inject
    private FacesContext facesContext;
 
    @Inject
-   private EntityManager em;
-
-   @Inject
-   private Event<Member> memberEventSrc;
+   private MemberRegistration memberRegistration;
 
    @Inject
    @Push(topic = PUSH_CDI_TOPIC) Event<String> pushEvent;
@@ -65,10 +58,8 @@ public class MemberRegistration {
    }
 
    public void register() throws Exception {
-      log.info("Registering " + newMember.getName());
-      em.persist(newMember);
+      memberRegistration.register(newMember);
       facesContext.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, "Registered!", "Registration successful"));
-      memberEventSrc.fire(newMember);
       pushEvent.fire(String.format("New member added: %s (id: %d)", newMember.getName(), newMember.getId()));
       initNewMember();
    }

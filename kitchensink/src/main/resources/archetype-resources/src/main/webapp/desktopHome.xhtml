@@ -26,7 +26,7 @@
              <p>Enforces annotation-based constraints defined on the model class.</p>
 
              <h:panelGrid columns="2">
-                <a4j:commandButton id="register" action="${symbol_pound}{memberRegistration.register}" value="Register"
+                <a4j:commandButton id="register" action="${symbol_pound}{memberController.register}" value="Register"
                                    execute="newMemberPanel" render="newMemberPanel"/>
                 <rich:messages globalOnly="true"/>
              </h:panelGrid>
@@ -45,7 +45,7 @@
                       <a4j:commandLink styleClass="no-decor" render="memberPanel" execute="@this"
                                        oncomplete="${symbol_pound}{rich:component('memberPopup')}.show()">
                          View
-                         <f:setPropertyActionListener target="${symbol_pound}{memberRegistration.member}" value="${symbol_pound}{_member}"/>
+                         <f:setPropertyActionListener target="${symbol_pound}{memberController.member}" value="${symbol_pound}{_member}"/>
                       </a4j:commandLink>
                    </rich:column>
                    <rich:column>

@@ -17,7 +17,7 @@
             <a4j:commandLink styleClass="no-decor" render="@form" execute="@this"
                              oncomplete="location.hash='detail-page'">
                View
-               <f:setPropertyActionListener target="${symbol_pound}{memberRegistration.member}" value="${symbol_pound}{_member}"/>
+               <f:setPropertyActionListener target="${symbol_pound}{memberController.member}" value="${symbol_pound}{_member}"/>
             </a4j:commandLink>
          </rich:column>
          <rich:column>
@@ -42,10 +42,6 @@
       </rich:dataTable>
    </h:panelGroup>
    <div id="newMemberMessages" class="update"/>
-
-   <a4j:push address="pushCdi" ondataavailable="showMessage(event.rf.data)">
-      <a4j:ajax event="dataavailable" render="membersPanel" />
-   </a4j:push>
 
 </ui:composition>
 

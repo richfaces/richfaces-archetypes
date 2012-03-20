@@ -27,6 +27,9 @@
                <p>Richfaces Mobile</p>
             </div>
          </header>
+         <a4j:push address="pushCdi">
+            <a4j:ajax event="dataavailable" render="@form" />
+         </a4j:push>
          <div id="page-container">
                <div id="home-page" class="page stage-left">
                   <ui:include src="mobile/home.xhtml"/>
