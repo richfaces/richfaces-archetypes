@@ -37,6 +37,7 @@
 
     <modules>
         <module>simpleapp</module>
+        <module>kitchensink</module>
         <module>components/component</module>
         <module>components/component-short</module>
         <module>components/components-aggregator</module>
