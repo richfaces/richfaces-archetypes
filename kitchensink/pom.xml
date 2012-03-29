@@ -6,18 +6,18 @@
     <parent>
         <groupId>org.richfaces</groupId>
         <artifactId>richfaces-root-parent</artifactId>
-        <version>4.2.1-SNAPSHOT</version>
+        <version>4.2.1.CR1</version>
     </parent>
 
     <groupId>org.richfaces.archetypes</groupId>
     <artifactId>richfaces-archetype-kitchensink</artifactId>
     <packaging>maven-archetype</packaging>
-    <version>4.2.1-SNAPSHOT</version>
+    <version>4.2.1.CR1</version>
 
     <name>RichFaces Archetypes Kitchen Sink Application</name>
 
     <properties>
-        <richfaces-default-version>4.2.1-SNAPSHOT</richfaces-default-version>
+        <richfaces-default-version>4.2.1.CR1</richfaces-default-version>
     </properties>
 
     <dependencyManagement>

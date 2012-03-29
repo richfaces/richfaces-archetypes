@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.richfaces</groupId>
         <artifactId>richfaces-root-parent</artifactId>
-        <version>4.2.1-SNAPSHOT</version>
+        <version>4.2.1.CR1</version>
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
@@ -13,10 +13,10 @@
     <artifactId>richfaces-archetype-simpleapp</artifactId>
     <packaging>maven-archetype</packaging>
     <name>RichFaces Archetypes Simple Application</name>
-    <version>4.2.1-SNAPSHOT</version>
+    <version>4.2.1.CR1</version>
 
     <properties>
-        <richfaces-default-version>4.2.1-SNAPSHOT</richfaces-default-version>
+        <richfaces-default-version>4.2.1.CR1</richfaces-default-version>
     </properties>
 
     <dependencyManagement>
