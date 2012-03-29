@@ -7,6 +7,7 @@
         <groupId>org.richfaces</groupId>
         <artifactId>richfaces-root-parent</artifactId>
         <version>4.2.1.CR1</version>
+        <relativePath>../../build/parent/pom.xml</relativePath>
     </parent>
 
     <groupId>org.richfaces.archetypes</groupId>
