@@ -17,18 +17,12 @@
         <!-- [WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent! -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <!-- Define the version of JBoss' Java EE 6 APIs and Tools we want to import.  -->
-        <javaee6.with.tools.version>1.0.0.M1</javaee6.with.tools.version>
-        <!-- Alternatively, comment out the above line, and un-comment the line below to
-            use version 3.0.0.Beta1-redhat-1 which is a release certified
-            to work with JBoss EAP 6. It requires you have access to the JBoss EAP 6 maven repository. -->
+        <javaee6.with.tools.version>1.0.0.M4</javaee6.with.tools.version>
+        <!-- Alternatively, comment out the above line, and un-comment the line below to use version 3.0.0.Beta1-redhat-1
+        which is a release certified to work with JBoss EAP 6. It requires you have access to the JBoss EAP 6 maven repository. -->
         <!--
         <javaee6.spec.version>3.0.0.Beta1-redhat-1</javaee6.spec.version>
         -->
-        #if ($enterprise == "true" || $enterprise == "y" || $enterprise == "yes" )
-        <org.richfaces.bom.version>${richfaces-enterprise-version}</org.richfaces.bom.version>
-        #else
-        <org.richfaces.bom.version>${richfaces-version}</org.richfaces.bom.version>
-        #end
     </properties>
 
     <dependencyManagement>
@@ -120,6 +114,13 @@
             <scope>provided</scope>
         </dependency>
 
+        <!-- Import the JSF impl, to allow for application debugging -->
+        <dependency>
+            <groupId>com.sun.faces</groupId>
+            <artifactId>jsf-impl</artifactId>
+            <scope>provided</scope>
+        </dependency>
+
         <!-- Import the Servlet API, we use provided scope as the API is included in JBoss AS 7 -->
         <dependency>
             <groupId>org.jboss.spec.javax.servlet</groupId>
@@ -153,14 +154,6 @@
             <groupId>org.atmosphere</groupId>
             <artifactId>atmosphere-runtime</artifactId>
             <exclusions>
-                <!--<exclusion>-->
-                <!--<groupId>org.atmosphere</groupId>-->
-                <!--<artifactId>atmosphere-compat-weblogic</artifactId>-->
-                <!--</exclusion>-->
-                <!--<exclusion>-->
-                <!--<groupId>org.atmosphere</groupId>-->
-                <!--<artifactId>atmosphere-compat-tomcat</artifactId>-->
-                <!--</exclusion>-->
                 <exclusion>
                     <groupId>org.slf4j</groupId>
                     <artifactId>slf4j-api</artifactId>
@@ -176,6 +169,20 @@
             <artifactId>hibernate-jpamodelgen</artifactId>
             <version>1.1.1.Final</version>
             <scope>provided</scope>
+        </dependency>
+
+        <!-- The rewrite library allows us to do url rewriting - used here for rewriting mobile devices to mobile specific views -->
+        <dependency>
+            <groupId>org.ocpsoft.rewrite</groupId>
+            <artifactId>rewrite-servlet</artifactId>
+            <version>1.0.3.Final</version>
+        </dependency>
+
+        <!-- The cdi integration allows for CDI injection into the rewrite configuration class -->
+        <dependency>
+            <groupId>org.ocpsoft.rewrite</groupId>
+            <artifactId>rewrite-integration-cdi</artifactId>
+            <version>1.0.3.Final</version>
         </dependency>
 
         <!-- Needed for running tests (you may also use TestNG) -->

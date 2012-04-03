@@ -28,7 +28,6 @@
             <includes>
                 <include>**/*.xhtml</include>
                 <include>**/*.xml</include>
-                <include>**/*.html</include>
             </includes>
         </fileSet>
         <fileSet filtered="true" encoding="UTF-8">
@@ -43,6 +42,7 @@
                 <include>**/*.png</include>
                 <include>**/*.js</include>
                 <include>**/*.css</include>
+                <include>**/*.jsf</include>
             </includes>
         </fileSet>
         <fileSet encoding="UTF-8">

@@ -12,10 +12,10 @@
                 xmlns:mobile="http://java.sun.com/jsf/composite/components/mobile">
    <h:panelGroup id="newMemberPanel" layout="block" styleClass="mobileContent">
       <br />
-      <mobile:memberForm member="${symbol_pound}{newMember}"/>
+      <mobile:memberForm id="memberForm" member="${symbol_pound}{newMember}"/>
       <a4j:commandButton id="register" action="${symbol_pound}{memberController.register}" value="Register"
-                oncomplete="if ( ${symbol_pound}{not facesContext.validationFailed} ) location.hash='list-page'"
-                execute="newMemberPanel" render="newMemberPanel,membersPanel"/>
+                oncomplete="if ( ${symbol_pound}{not facesContext.validationFailed} ) location.hash='list'"
+                execute="@form" render="newMemberPanel"/>
       <rich:messages globalOnly="true"/>
    </h:panelGroup>
 </ui:composition>
