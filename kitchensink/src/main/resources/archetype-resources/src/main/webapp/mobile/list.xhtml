@@ -15,8 +15,8 @@
       <rich:dataTable var="_member" value="${symbol_pound}{members}" rendered="${symbol_pound}{not empty members}" style="width : 100%">
          <rich:column>
             <a4j:commandLink styleClass="no-decor" render="@form" execute="@this"
-                             oncomplete="location.hash='detail-page'">
-               View
+                             oncomplete="location.hash='detail'"> 
+               View 
                <f:setPropertyActionListener target="${symbol_pound}{memberController.member}" value="${symbol_pound}{_member}"/>
             </a4j:commandLink>
          </rich:column>
