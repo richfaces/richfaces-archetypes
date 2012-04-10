@@ -23,6 +23,11 @@
         <!--
         <javaee6.spec.version>3.0.0.Beta1-redhat-1</javaee6.spec.version>
         -->
+        #if ($enterprise == "true" || $enterprise == "y" || $enterprise == "yes" )
+        <org.richfaces.bom.version>${richfaces-enterprise-version}</org.richfaces.bom.version>
+        #else
+        <org.richfaces.bom.version>${richfaces-version}</org.richfaces.bom.version>
+        #end
     </properties>
 
     <dependencyManagement>
