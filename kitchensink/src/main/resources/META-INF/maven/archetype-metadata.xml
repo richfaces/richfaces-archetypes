@@ -6,7 +6,7 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <requiredProperties>
         <requiredProperty key="richfaces-version">
-            <defaultValue>4.2.1-SNAPSHOT</defaultValue>
+            <defaultValue>4.2.1.Final</defaultValue>
         </requiredProperty>
         <requiredProperty key="enterprise">
             <defaultValue>n</defaultValue>
