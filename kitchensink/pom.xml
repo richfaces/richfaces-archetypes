@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.richfaces</groupId>
+        <artifactId>richfaces-root-parent</artifactId>
+        <version>4.2.1.Final</version>
+        <relativePath>../../build/parent/pom.xml</relativePath>
+    </parent>
+
+    <groupId>org.richfaces.archetypes</groupId>
+    <artifactId>richfaces-archetype-kitchensink</artifactId>
+    <packaging>maven-archetype</packaging>
+    <version>4.2.1.Final</version>
+
+    <name>RichFaces Archetypes Kitchen Sink Application</name>
+
+    <properties>
+        <richfaces-default-version>4.2.1.Final</richfaces-default-version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- RichFaces BOM Import -->
+            <dependency>
+                <groupId>org.richfaces</groupId>
+                <artifactId>richfaces-bom</artifactId>
+                <version>${richfaces-default-version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <extensions>
+            <extension>
+                <groupId>org.apache.maven.archetype</groupId>
+                <artifactId>archetype-packaging</artifactId>
+                <version>2.0</version>
+            </extension>
+        </extensions>
+
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <artifactId>maven-archetype-plugin</artifactId>
+                    <version>2.0</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+
+    <scm>
+        <connection>scm:git:git://github.com/richfaces/archetypes.git</connection>
+        <developerConnection>scm:git:git@github.com:richfaces/archetypes.git</developerConnection>
+        <url>https://github.com/richfaces/archetypes</url>
+    </scm>
+</project>

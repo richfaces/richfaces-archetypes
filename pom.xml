@@ -31,12 +31,13 @@
 
     <groupId>org.richfaces.archetypes</groupId>
     <artifactId>archetypes-aggregator</artifactId>
-    <version>4.2.0.Final</version>
+    <version>4.2.1.Final</version>
     <packaging>pom</packaging>
     <name>RichFaces Archetypes Aggregator</name>
 
     <modules>
         <module>simpleapp</module>
+        <module>kitchensink</module>
         <module>components/component</module>
         <module>components/component-short</module>
         <module>components/components-aggregator</module>
