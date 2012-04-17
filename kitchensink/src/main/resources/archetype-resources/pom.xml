@@ -17,10 +17,9 @@
         <!-- [WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent! -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <!-- Define the version of JBoss' Java EE 6 APIs and Tools we want to import.  -->
-        <javaee6.with.tools.version>1.0.0.M1</javaee6.with.tools.version>
-        <!-- Alternatively, comment out the above line, and un-comment the line below to
-            use version 3.0.0.Beta1-redhat-1 which is a release certified
-            to work with JBoss EAP 6. It requires you have access to the JBoss EAP 6 maven repository. -->
+        <javaee6.with.tools.version>1.0.0.M4</javaee6.with.tools.version>
+        <!-- Alternatively, comment out the above line, and un-comment the line below to use version 3.0.0.Beta1-redhat-1
+        which is a release certified to work with JBoss EAP 6. It requires you have access to the JBoss EAP 6 maven repository. -->
         <!--
         <javaee6.spec.version>3.0.0.Beta1-redhat-1</javaee6.spec.version>
         -->
@@ -120,6 +119,13 @@
             <scope>provided</scope>
         </dependency>
 
+        <!-- Import the JSF impl, to allow for application debugging -->
+        <dependency>
+            <groupId>com.sun.faces</groupId>
+            <artifactId>jsf-impl</artifactId>
+            <scope>provided</scope>
+        </dependency>
+
         <!-- Import the Servlet API, we use provided scope as the API is included in JBoss AS 7 -->
         <dependency>
             <groupId>org.jboss.spec.javax.servlet</groupId>
@@ -153,14 +159,6 @@
             <groupId>org.atmosphere</groupId>
             <artifactId>atmosphere-runtime</artifactId>
             <exclusions>
-                <!--<exclusion>-->
-                <!--<groupId>org.atmosphere</groupId>-->
-                <!--<artifactId>atmosphere-compat-weblogic</artifactId>-->
-                <!--</exclusion>-->
-                <!--<exclusion>-->
-                <!--<groupId>org.atmosphere</groupId>-->
-                <!--<artifactId>atmosphere-compat-tomcat</artifactId>-->
-                <!--</exclusion>-->
                 <exclusion>
                     <groupId>org.slf4j</groupId>
                     <artifactId>slf4j-api</artifactId>
@@ -176,6 +174,18 @@
             <artifactId>hibernate-jpamodelgen</artifactId>
             <version>1.1.1.Final</version>
             <scope>provided</scope>
+        </dependency>
+
+        <!-- The rewrite library allows us to do url rewriting - used here for rewriting mobile devices to mobile specific views -->
+        <dependency>
+            <groupId>org.ocpsoft.rewrite</groupId>
+            <artifactId>rewrite-servlet</artifactId>
+        </dependency>
+
+        <!-- The cdi integration allows for CDI injection into the rewrite configuration class -->
+        <dependency>
+            <groupId>org.ocpsoft.rewrite</groupId>
+            <artifactId>rewrite-integration-cdi</artifactId>
         </dependency>
 
         <!-- Needed for running tests (you may also use TestNG) -->
@@ -208,7 +218,6 @@
             <!-- Compiler plugin enforces Java 1.6 compatibility and activates annotation processors -->
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>2.3.1</version>
                 <configuration>
                     <source>1.6</source>
                     <target>1.6</target>
@@ -216,7 +225,6 @@
             </plugin>
             <plugin>
                 <artifactId>maven-war-plugin</artifactId>
-                <version>2.1.1</version>
                 <configuration>
                     <!-- Java EE 6 doesn't require web.xml, Maven needs to catch up! -->
                     <failOnMissingWebXml>false</failOnMissingWebXml>
@@ -233,7 +241,6 @@
             <plugin>
                 <groupId>org.jboss.as.plugins</groupId>
                 <artifactId>jboss-as-maven-plugin</artifactId>
-                <version>7.1.0.Final</version>
             </plugin>
         </plugins>
     </build>
@@ -250,7 +257,6 @@
                 <plugins>
                     <plugin>
                         <artifactId>maven-surefire-plugin</artifactId>
-                        <version>2.4.3</version>
                         <configuration>
                             <skip>true</skip>
                         </configuration>
@@ -296,7 +302,6 @@
                 <plugins>
                     <plugin>
                         <artifactId>maven-war-plugin</artifactId>
-                        <version>2.1.1</version>
                         <configuration>
                             <outputDirectory>deployments</outputDirectory>
                             <warName>ROOT</warName>

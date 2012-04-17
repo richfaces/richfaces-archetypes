@@ -14,11 +14,11 @@
       <h:outputScript target="head" name="showMessage.js" library="js"/>
       <rich:dataTable var="_member" value="${symbol_pound}{members}" rendered="${symbol_pound}{not empty members}" style="width : 100%">
          <rich:column>
-            <a4j:commandLink styleClass="no-decor" render="@form" execute="@this"
-                             oncomplete="location.hash='detail-page'">
-               View
-               <f:setPropertyActionListener target="${symbol_pound}{memberController.member}" value="${symbol_pound}{_member}"/>
-            </a4j:commandLink>
+             <a4j:commandLink styleClass="no-decor" render="@form" execute="@this" oncomplete="${symbol_dollar}('${symbol_pound}app-page').data('activePage', 'detail'); location.hash='detail'">
+                 View
+                 <f:setPropertyActionListener target="${symbol_pound}{memberController.member}" value="${symbol_pound}{_member}"/>
+                 <a4j:param name="page" assignTo="${symbol_pound}{pageBean.location}" value="detail" />
+             </a4j:commandLink>
          </rich:column>
          <rich:column>
             <f:facet name="header">Id</f:facet>
@@ -42,6 +42,10 @@
       </rich:dataTable>
    </h:panelGroup>
    <div id="newMemberMessages" class="update"/>
+
+   <a4j:push address="pushCdi" ondataavailable="showMessage(event.rf.data)">
+      <a4j:ajax event="dataavailable" render="mobileForm:membersPanel" />
+   </a4j:push>
 
 </ui:composition>
 

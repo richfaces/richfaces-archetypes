@@ -11,8 +11,10 @@
                 xmlns:rich="http://richfaces.org/rich"
                 xmlns:my="http://java.sun.com/jsf/composite/components">
     <h:panelGroup id="memberDetailPanel" layout="block" styleClass="mobileContent">
-        <my:memberForm member="${symbol_pound}{member}"/>
+        <my:memberDetails id="memberDetails" member="${symbol_pound}{member}"/>
     </h:panelGroup>
-</ui:composition>
+    
 
+</ui:composition>
+ 
 </html>
