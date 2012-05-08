@@ -11,7 +11,7 @@
                 xmlns:rich="http://richfaces.org/rich"
                 xmlns:my="http://java.sun.com/jsf/composite/components">
    <h:panelGroup id="membersPanel" layout="block">
-      <h:outputScript target="head" name="showMessage.js" library="js"/>
+      <h:outputScript name="showMessage.js" library="js"/>
       <rich:dataTable var="_member" value="${symbol_pound}{members}" rendered="${symbol_pound}{not empty members}" style="width : 100%">
          <rich:column>
              <a4j:commandLink styleClass="no-decor" render="@form" execute="@this" oncomplete="${symbol_dollar}('${symbol_pound}app-page').data('activePage', 'detail'); location.hash='detail'">
