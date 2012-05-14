@@ -12,7 +12,7 @@
             <defaultValue>n</defaultValue>
         </requiredProperty>
         <requiredProperty key="richfaces-enterprise-version">
-            <defaultValue>4.2.2-SNAPSHOT-redhat-1</defaultValue>
+            <defaultValue>4.2.2-SNAPSHOT</defaultValue>
         </requiredProperty>
     </requiredProperties>
     <fileSets>
