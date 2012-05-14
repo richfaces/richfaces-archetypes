@@ -8,7 +8,7 @@
     <version>${version}</version>
     <packaging>war</packaging>
     <name>JBoss AS Quickstarts: kitchensink-rf</name>
-    <description>A starter Java EE 6 webapp project for use on JBoss AS 7 / EAP 6, generated from the jboss-javaee6-webapp archetype</description>
+    <description>A starter Java EE 6 webapp project for use on JBoss AS 7.1 / EAP 6, generated from the richfaces-archetype-kitchensink archetype</description>
 
     <url>http://jboss.org/richfaces</url>
 
@@ -17,15 +17,20 @@
         <!-- [WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent! -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <!-- Define the version of JBoss' Java EE 6 APIs and Tools we want to import.  -->
-        <javaee6.with.tools.version>1.0.0.M4</javaee6.with.tools.version>
-        <!-- Alternatively, comment out the above line, and un-comment the line below to use version 3.0.0.Beta1-redhat-1
-        which is a release certified to work with JBoss EAP 6. It requires you have access to the JBoss EAP 6 maven repository. -->
-        <!--
-        <javaee6.spec.version>3.0.0.Beta1-redhat-1</javaee6.spec.version>
-        -->
         #if ($enterprise == "true" || $enterprise == "y" || $enterprise == "yes" )
+        <javaee6.with.tools.version>1.0.0.M7-redhat-1</javaee6.with.tools.version>
+        <!-- Alternatively, comment out the above line, and un-comment the line below to use the community version 1.0.0.M7 -->
+        <!--
+        <javaee6.with.tools.version>1.0.0.M7</javaee6.with.tools.version>
+        -->
         <org.richfaces.bom.version>${richfaces-enterprise-version}</org.richfaces.bom.version>
         #else
+        <javaee6.with.tools.version>1.0.0.M7</javaee6.with.tools.version>
+        <!-- Alternatively, comment out the above line, and un-comment the line below to use version 1.0.0.M7-redhat-1
+        which is a release certified to work with JBoss EAP 6. It requires you have access to the JBoss EAP 6 maven repository. -->
+        <!--
+        <javaee6.with.tools.version>1.0.0.M7-redhat-1</javaee6.with.tools.version>
+        -->
         <org.richfaces.bom.version>${richfaces-version}</org.richfaces.bom.version>
         #end
     </properties>
@@ -115,7 +120,7 @@
         <!-- Import the JSF API, we use provided scope as the API is included in JBoss AS 7 -->
         <dependency>
             <groupId>org.jboss.spec.javax.faces</groupId>
-            <artifactId>jboss-jsf-api_2.0_spec</artifactId>
+            <artifactId>jboss-jsf-api_2.1_spec</artifactId>
             <scope>provided</scope>
         </dependency>
 
