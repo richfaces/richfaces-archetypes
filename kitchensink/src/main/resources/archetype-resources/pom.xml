@@ -8,7 +8,7 @@
     <version>${version}</version>
     <packaging>war</packaging>
     <name>JBoss AS Quickstarts: kitchensink-rf</name>
-    <description>A starter Java EE 6 RichFaces webapp project for use on JBoss AS 7 / EAP 6</description>
+    <description>A starter Java EE 6 webapp project for use on JBoss AS 7 / EAP 6, generated from the jboss-javaee6-webapp archetype</description>
 
     <url>http://jboss.org/richfaces</url>
 
@@ -119,13 +119,6 @@
             <scope>provided</scope>
         </dependency>
 
-        <!-- Import the JSF impl, to allow for application debugging -->
-        <dependency>
-            <groupId>com.sun.faces</groupId>
-            <artifactId>jsf-impl</artifactId>
-            <scope>provided</scope>
-        </dependency>
-
         <!-- Import the Servlet API, we use provided scope as the API is included in JBoss AS 7 -->
         <dependency>
             <groupId>org.jboss.spec.javax.servlet</groupId>
@@ -138,10 +131,6 @@
             <groupId>org.richfaces.core</groupId>
             <artifactId>richfaces-core-impl</artifactId>
             <exclusions>
-                <exclusion>
-                    <artifactId>cssparser</artifactId>
-                    <groupId>net.sourceforge.cssparser</groupId>
-                </exclusion>
                 <exclusion>
                     <artifactId>guava</artifactId>
                     <groupId>com.google.guava</groupId>
@@ -230,8 +219,7 @@
                     <failOnMissingWebXml>false</failOnMissingWebXml>
                     <archive>
                         <manifestEntries>
-                            <Dependencies>org.w3c.css.sac,net.sourceforge.cssparser,com.google.guava,org.slf4j
-                            </Dependencies>
+                            <Dependencies>com.google.guava,org.slf4j</Dependencies>
                         </manifestEntries>
                     </archive>
                 </configuration>

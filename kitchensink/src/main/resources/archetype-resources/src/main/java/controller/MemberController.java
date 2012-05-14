@@ -3,10 +3,7 @@
 #set( $symbol_escape = '\' )
 package ${package}.controller;
 
-import java.util.logging.Logger;
-
 import javax.annotation.PostConstruct;
-import javax.ejb.Stateful;
 import javax.enterprise.event.Event;
 import javax.enterprise.inject.Model;
 import javax.enterprise.inject.Produces;
@@ -14,10 +11,9 @@ import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
 import javax.inject.Inject;
 import javax.inject.Named;
-import javax.persistence.EntityManager;
 
-import ${package}.service.MemberRegistration;
 import ${package}.model.Member;
+import ${package}.service.MemberRegistration;
 import org.richfaces.cdi.push.Push;
 
 // The @Model stereotype is a convenience mechanism to make this a request-scoped bean that has an

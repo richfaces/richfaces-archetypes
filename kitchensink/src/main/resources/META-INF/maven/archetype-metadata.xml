@@ -12,7 +12,7 @@
             <defaultValue>n</defaultValue>
         </requiredProperty>
         <requiredProperty key="richfaces-enterprise-version">
-            <defaultValue>4.3.0-SNAPSHOT-redhat-1</defaultValue>
+            <defaultValue>4.3.0-SNAPSHOT</defaultValue>
         </requiredProperty>
     </requiredProperties>
     <fileSets>
@@ -60,6 +60,12 @@
             <directory>src/test/resources</directory>
             <includes>
                 <include>**/*.xml</include>
+            </includes>
+        </fileSet>
+        <fileSet filtered="true" encoding="UTF-8">
+            <directory></directory>
+            <includes>
+                <include>README.html</include>
             </includes>
         </fileSet>
         <fileSet encoding="UTF-8">
