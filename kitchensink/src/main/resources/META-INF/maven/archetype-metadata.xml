@@ -6,14 +6,17 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <requiredProperties>
         <requiredProperty key="richfaces-version">
-            <defaultValue>4.3.0-SNAPSHOT</defaultValue>
+            <defaultValue>4.2.2.Final</defaultValue>
         </requiredProperty>
         <requiredProperty key="enterprise">
             <defaultValue>n</defaultValue>
         </requiredProperty>
         <requiredProperty key="richfaces-enterprise-version">
-            <defaultValue>4.3.0-SNAPSHOT</defaultValue>
+            <defaultValue>4.2.2.Final-redhat-1</defaultValue>
         </requiredProperty>
+        <requiredProperty key="javaee6-with-tools-enterprise-version">
+            <defaultValue>1.0.0.M12-redhat-1</defaultValue>
+        </requiredProperty>        
     </requiredProperties>
     <fileSets>
         <fileSet filtered="true" packaged="true" encoding="UTF-8">
