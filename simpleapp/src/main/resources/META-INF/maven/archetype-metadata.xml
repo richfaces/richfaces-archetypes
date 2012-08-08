@@ -15,7 +15,7 @@
             <defaultValue>n</defaultValue>
         </requiredProperty>
         <requiredProperty key="richfaces-enterprise-version">
-            <defaultValue>4.3.0.20120802-M1-redhat-1</defaultValue>
+            <defaultValue>4.3.0-SNAPSHOT-redhat-1</defaultValue>
         </requiredProperty>
         <requiredProperty key="mobile-optimized">
             <defaultValue>n</defaultValue>
