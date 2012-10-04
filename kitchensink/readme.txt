@@ -2,7 +2,7 @@
 
                       RichFaces - Ajax enabled JSF 2.0 component library
 
-                                 RichFaces 4.2.3-SNAPSHOT ARCHETYPE PROJECT
+                                 RichFaces 4.2.3.CR1 ARCHETYPE PROJECT
                                                     http://richfaces.org
                                                               March 2011
                      This software is distributed under the terms of the 
@@ -43,7 +43,7 @@ command below.  Just provide the variables and maven will do the rest.
    mvn archetype:generate \
        -DarchetypeGroupId=org.richfaces.archetypes \
        -DarchetypeArtifactId=richfaces-archetype-kitchensink \
-       -DarchetypeVersion=4.2.3-SNAPSHOT \
+       -DarchetypeVersion=4.2.3.CR1 \
        -DgroupId=<yourGroupId> \
        -DartifactId=<yourArtifactId> \
        -Dversion=<yourSnapshotVersion>
