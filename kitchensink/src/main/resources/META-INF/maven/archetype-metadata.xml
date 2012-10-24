@@ -6,13 +6,13 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <requiredProperties>
         <requiredProperty key="richfaces-version">
-            <defaultValue>4.3.0-SNAPSHOT</defaultValue>
+            <defaultValue>4.3.0.20121024-M2</defaultValue>
         </requiredProperty>
         <requiredProperty key="enterprise">
             <defaultValue>n</defaultValue>
         </requiredProperty>
         <requiredProperty key="richfaces-enterprise-version">
-            <defaultValue>4.3.0-SNAPSHOT</defaultValue>
+            <defaultValue>4.3.0.20121024-M2</defaultValue>
         </requiredProperty>
     </requiredProperties>
     <fileSets>
