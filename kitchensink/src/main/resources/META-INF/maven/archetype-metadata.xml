@@ -6,13 +6,13 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <requiredProperties>
         <requiredProperty key="richfaces-version">
-            <defaultValue>4.2.3-SNAPSHOT</defaultValue>
+            <defaultValue>4.2.3.Final</defaultValue>
         </requiredProperty>
         <requiredProperty key="enterprise">
             <defaultValue>n</defaultValue>
         </requiredProperty>
         <requiredProperty key="richfaces-enterprise-version">
-            <defaultValue>4.2.3-SNAPSHOT</defaultValue>
+            <defaultValue>4.2.3.Final-redhat-1</defaultValue>
         </requiredProperty>
     </requiredProperties>
     <fileSets>
@@ -60,12 +60,6 @@
             <directory>src/test/resources</directory>
             <includes>
                 <include>**/*.xml</include>
-            </includes>
-        </fileSet>
-        <fileSet filtered="true" encoding="UTF-8">
-            <directory></directory>
-            <includes>
-                <include>README.html</include>
             </includes>
         </fileSet>
         <fileSet encoding="UTF-8">
