@@ -6,19 +6,19 @@
     <parent>
         <groupId>org.richfaces</groupId>
         <artifactId>richfaces-root-parent</artifactId>
-        <version>4.2.2.Final</version>
+        <version>4.2.3.Final</version>
         <relativePath>../../build/parent/pom.xml</relativePath>
     </parent>
 
     <groupId>org.richfaces.archetypes</groupId>
     <artifactId>richfaces-archetype-kitchensink</artifactId>
     <packaging>maven-archetype</packaging>
-    <version>4.2.2.Final</version>
+    <version>4.2.3.Final</version>
 
     <name>RichFaces Archetypes Kitchen Sink Application</name>
 
     <properties>
-        <richfaces-default-version>4.2.2.Final</richfaces-default-version>
+        <richfaces-default-version>4.2.3.Final</richfaces-default-version>
     </properties>
 
     <dependencyManagement>

@@ -33,7 +33,7 @@
             <defaultValue>${category}</defaultValue>
         </requiredProperty>
         <requiredProperty key="version">
-            <defaultValue>4.2.2.Final</defaultValue>
+            <defaultValue>4.2.3.Final</defaultValue>
         </requiredProperty>
     </requiredProperties>
 
