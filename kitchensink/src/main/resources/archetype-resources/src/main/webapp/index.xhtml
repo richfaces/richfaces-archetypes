@@ -17,7 +17,7 @@
         <h1>Welcome to JBoss!</h1>
 
         <div>
-            <p>You have successfully deployed a RichFaces web application on JBoss AS 7.</p>
+            <p>You have successfully deployed a RichFaces web application.</p>
 
             <h3>Your application can run on:</h3>
             <h:graphicImage library="gfx" name="dualbrand_as7eap.png"/>
@@ -27,7 +27,7 @@
           <rich:panel id="newMemberPanel" styleClass=".form" header="Member Registration" headerClass="header">
               <p>Enforces annotation-based constraints defined on the model class.</p>
 
-              <my:memberForm member="${symbol_pound}{newMember}"/>
+              <my:memberForm id="memberForm" member="${symbol_pound}{newMember}"/>
 
              <h:panelGrid columns="2">
                 <a4j:commandButton id="register" action="${symbol_pound}{memberController.register}" value="Register"
@@ -43,36 +43,36 @@
              <h:panelGroup rendered="${symbol_pound}{empty members}">
                 <em>No registered members.</em>
              </h:panelGroup>
-             <rich:dataTable var="_member" value="${symbol_pound}{members}" rendered="${symbol_pound}{not empty members}" style="width : 100%">
-                   <rich:column>
+             <rich:dataTable id="memberTable" var="_member" value="${symbol_pound}{members}" rendered="${symbol_pound}{not empty members}" style="width : 100%">
+                   <rich:column id="view">
                       <a4j:commandLink styleClass="no-decor" render="memberPanel" execute="@this"
                                        oncomplete="${symbol_pound}{rich:component('memberPopup')}.show()">
                          View
                          <f:setPropertyActionListener target="${symbol_pound}{memberController.member}" value="${symbol_pound}{_member}"/>
                       </a4j:commandLink>
                    </rich:column>
-                   <rich:column>
+                   <rich:column id="member_id">
                       <f:facet name="header">Id</f:facet>
                       ${symbol_pound}{_member.id}
                    </rich:column>
-                   <rich:column>
+                   <rich:column id="member_name">
                       <f:facet name="header">Name</f:facet>
                       ${symbol_pound}{_member.name}
                    </rich:column>
-                   <rich:column>
+                   <rich:column id="member_email">
                       <f:facet name="header">Email</f:facet>
                       ${symbol_pound}{_member.email}
                    </rich:column>
-                   <rich:column>
+                   <rich:column id="member_phone">
                       <f:facet name="header">Phone ${symbol_pound}</f:facet>
                       ${symbol_pound}{_member.phoneNumber}
                    </rich:column>
-                   <rich:column>
+                   <rich:column id="member_rest_url">
                       <f:facet name="header">REST URL</f:facet>
-                      <a href="${symbol_pound}{request.contextPath}/rest/members/${symbol_pound}{_member.id}">/rest/members/${symbol_pound}{_member.id}</a>
+                      <a href="${symbol_pound}{request.contextPath}/rest/members/${symbol_pound}{_member.id}" target="_rest_member">/rest/members/${symbol_pound}{_member.id}</a>
                    </rich:column>
                    <f:facet name="footer">
-                      REST URL for all members: <a href="${symbol_pound}{request.contextPath}/rest/members">/rest/members</a>
+                      REST URL for all members: <a href="${symbol_pound}{request.contextPath}/rest/members" target="_rest_all">/rest/members</a>
                    </f:facet>
                 </rich:dataTable>
           </rich:collapsiblePanel>

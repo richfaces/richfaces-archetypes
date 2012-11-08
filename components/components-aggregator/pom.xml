@@ -30,7 +30,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.richfaces.archetypes</groupId>
     <artifactId>richfaces-components-aggregator</artifactId>
-    <version>4.2.3.Final</version>
+    <version>4.2.3.Final-1</version>
     <packaging>maven-archetype</packaging>
     <name>RichFaces Archetypes Components Aggregator</name>
 
