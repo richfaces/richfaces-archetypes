@@ -6,9 +6,7 @@
                 xmlns:ui="http://java.sun.com/jsf/facelets"
                 xmlns:f="http://java.sun.com/jsf/core"
                 xmlns:h="http://java.sun.com/jsf/html"
-                xmlns:a4j="http://richfaces.org/a4j"
-                xmlns:rich="http://richfaces.org/rich"
-                xmlns:my="http://java.sun.com/jsf/composite/components">
+                xmlns:a4j="http://richfaces.org/a4j">
     <ui:define name="content">
         <h:outputStylesheet name="app.css" library="css"/>
         <h:outputStylesheet name="mobile.css" library="css"/>
@@ -26,16 +24,19 @@
             <h:form id="mobileForm">
                 <h:outputScript target="head">
                     var handleHashChange = function (page) {
-                        var appPage = ${symbol_dollar}('${symbol_pound}app-page');
-                        if (appPage.data('activePage') === page) {
-                            slidfast.core.slideTo('app-page');
-                        } else {
-                            loadPage(page);
-                            appPage.data('activePage', page);
-                        }
+                    var appPage = ${symbol_dollar}('${symbol_pound}app-page');
+                    if (appPage.data('activePage') === page) {
+                    slidfast.core.slideTo('app-page');
+                    } else {
+                    loadPage(page);
+                    appPage.data('activePage', page);
+                    }
                     }
                 </h:outputScript>
-                <a4j:jsFunction name="loadPage" data="${symbol_pound}{pageBean.location}" render="@form" oncomplete="slidfast.core.slideTo('app-page')">
+                <a4j:jsFunction name="loadPage"
+                                data="${symbol_pound}{pageBean.location}"
+                                render="@form"
+                                oncomplete="slidfast.core.slideTo('app-page')">
                     <a4j:param name="page" assignTo="${symbol_pound}{pageBean.location}"/>
                 </a4j:jsFunction>
 
@@ -44,10 +45,17 @@
                         <ui:include src="/mobile/home.xhtml"/>
                     </div>
                     <div id="app-page" class="page stage-right">
-                        <ui:include src="${symbol_pound}{pageBean.page}"/>
+                        <ui:include src="${symbol_pound}{pageBean.page}" />
                     </div>
                 </div>
+                
+                
             </h:form>
         </div>
+        
+        <a4j:push id="push" address="pushCdi" ondataavailable="showMessage(event.rf.data)">
+            <a4j:ajax event="dataavailable" render="mobileForm:membersPanel"/>
+        </a4j:push>
+
     </ui:define>
 </ui:composition>

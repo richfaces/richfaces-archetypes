@@ -27,10 +27,15 @@ package ${package}.controller;
 import javax.annotation.PostConstruct;
 import javax.enterprise.context.SessionScoped;
 import javax.enterprise.inject.Model;
+import javax.faces.context.ExternalContext;
+import javax.faces.context.FacesContext;
 import javax.inject.Named;
 import java.io.Serializable;
+import java.net.MalformedURLException;
 
 /**
+ * The PageBean maps the location hash from the browser into a jsf view-id
+ *
  * @author <a href="http://community.jboss.org/people/bleathem">Brian Leathem</a>
  */
 @Named
@@ -51,6 +56,14 @@ public class PageBean implements Serializable {
 
     public void setLocation(String location) {
         this.location = location;
-        this.page = String.format("/mobile/%s.xhtml", location);
+        ExternalContext context = FacesContext.getCurrentInstance().getExternalContext();
+        String viewId = String.format("/mobile/%s.xhtml", location);
+        try {
+            if (context.getResource(viewId) != null) {
+                this.page = viewId;
+            }
+        } catch (MalformedURLException e) {
+            // do nothing
+        }
     }
 }
