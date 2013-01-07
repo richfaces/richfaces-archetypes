@@ -37,7 +37,7 @@
         <jboss.bom.version>${jboss-bom-enterprise-version}</jboss.bom.version>
 #else
         <org.richfaces.bom.version>${richfaces-version}</org.richfaces.bom.version>
-        <jboss.bom.version>1.0.0.Final</jboss.bom.version>
+        <jboss.bom.version>1.0.2.Final</jboss.bom.version>
 #end
 
         <!-- other plugin versions -->
