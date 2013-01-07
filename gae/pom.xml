@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.richfaces</groupId>
         <artifactId>richfaces-parent</artifactId>
-        <version>12</version>
+        <version>13</version>
         <relativePath>../../parent/pom.xml</relativePath>
     </parent>
 
@@ -15,7 +15,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.richfaces.archetypes</groupId>
     <artifactId>richfaces-archetype-gae</artifactId>
-    <version>4.2.3.Final-1</version>
+    <version>4.2.3.Final-2</version>
     <packaging>maven-archetype</packaging>
     <name>RichFaces Archetypes GAE Application</name>
 
