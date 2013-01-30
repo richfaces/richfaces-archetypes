@@ -15,7 +15,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.richfaces.archetypes</groupId>
     <artifactId>richfaces-archetype-gae</artifactId>
-    <version>4.3.0-SNAPSHOT</version>
+    <version>4.3.0.Final</version>
     <packaging>maven-archetype</packaging>
     <name>RichFaces Archetypes GAE Application</name>
 
