@@ -58,4 +58,18 @@
         <developerConnection>scm:git:git@github.com:richfaces/archetypes.git</developerConnection>
         <url>https://github.com/richfaces/archetypes</url>
     </scm>
+
+    <description>A starter Java EE 6 webapp project for use on JBoss AS 7 / EAP 6, generated from the
+        jboss-javaee6-webapp archetype
+    </description>
+
+    <url>http://jboss.org/richfaces</url>
+
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.html</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
 </project>

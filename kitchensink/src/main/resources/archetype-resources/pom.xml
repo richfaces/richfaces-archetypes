@@ -22,6 +22,13 @@
     <description>A starter Java EE 6 webapp project for use on JBoss AS 7 / EAP 6, generated from the jboss-javaee6-webapp archetype</description>
 
     <url>http://jboss.org/richfaces</url>
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <distribution>repo</distribution>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.html</url>
+        </license>
+    </licenses>
 
     <properties>
         <!-- Explicitly declaring the source encoding eliminates the following message: -->
@@ -29,15 +36,15 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
         <!-- JBoss dependency versions -->
-        <jboss.as.plugin.version>7.1.1.Final</jboss.as.plugin.version>
+        <version.jboss.maven.plugin>7.3.Final</version.jboss.maven.plugin>
 
-        <!-- Define the version of the JBoss BOMs we want to import. The JBoss BOMs specify tested stacks. -->
+        <!-- Define the version of the JBoss BOMs we want to import to specify tested stacks. -->
 #if ($enterprise == "true" || $enterprise == "y" || $enterprise == "yes" )
-        <org.richfaces.bom.version>${richfaces-enterprise-version}</org.richfaces.bom.version>
-        <jboss.bom.version>${jboss-bom-enterprise-version}</jboss.bom.version>
+        <version.richfaces.bom>${richfaces-enterprise-version}</version.richfaces.bom>
+        <version.jboss.bom>${jboss-bom-enterprise-version}</version.jboss.bom>
 #else
-        <org.richfaces.bom.version>${richfaces-version}</org.richfaces.bom.version>
-        <jboss.bom.version>1.0.2.Final</jboss.bom.version>
+        <version.richfaces.bom>${richfaces-version}</version.richfaces.bom>
+        <version.jboss.bom>1.0.4.Final</version.jboss.bom>
 #end
 
         <!-- other plugin versions -->
@@ -63,14 +70,14 @@
             <dependency>
                 <groupId>org.jboss.bom</groupId>
                 <artifactId>jboss-javaee-6.0-with-tools</artifactId>
-                <version>${jboss.bom.version}</version>
+                <version>${version.jboss.bom}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
             <dependency>
                 <groupId>org.jboss.bom</groupId>
                 <artifactId>jboss-javaee-6.0-with-hibernate</artifactId>
-                <version>${jboss.bom.version}</version>
+                <version>${version.jboss.bom}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -79,7 +86,7 @@
             <dependency>
                 <groupId>org.richfaces</groupId>
                 <artifactId>richfaces-bom</artifactId>
-                <version>${org.richfaces.bom.version}</version>
+                <version>${version.richfaces.bom}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -270,7 +277,7 @@
             <plugin>
                 <groupId>org.jboss.as.plugins</groupId>
                 <artifactId>jboss-as-maven-plugin</artifactId>
-                <version>${jboss.as.plugin.version}</version>
+                <version>${version.jboss.maven.plugin}</version>
             </plugin>
         </plugins>
     </build>
