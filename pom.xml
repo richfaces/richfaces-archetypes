@@ -31,7 +31,7 @@
 
     <groupId>org.richfaces.archetypes</groupId>
     <artifactId>archetypes-aggregator</artifactId>
-    <version>4.3.1-SNAPSHOT</version>
+    <version>4.3.1.CR1</version>
     <packaging>pom</packaging>
     <name>RichFaces Archetypes Aggregator</name>
 
