@@ -6,13 +6,13 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <requiredProperties>
         <requiredProperty key="richfaces-version">
-            <defaultValue>4.3.1.CR1</defaultValue>
+            <defaultValue>4.3.1.Final</defaultValue>
         </requiredProperty>
         <requiredProperty key="enterprise">
             <defaultValue>n</defaultValue>
         </requiredProperty>
         <requiredProperty key="richfaces-enterprise-version">
-            <defaultValue>4.3.1.CR1-redhat-1</defaultValue>
+            <defaultValue>4.3.1.Final-redhat-1</defaultValue>
         </requiredProperty>
         <requiredProperty key="jboss-bom-enterprise-version">
             <defaultValue>1.0.2.Final-redhat-1</defaultValue>
