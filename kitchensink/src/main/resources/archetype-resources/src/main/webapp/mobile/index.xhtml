@@ -22,7 +22,7 @@
                 xmlns:ui="http://java.sun.com/jsf/facelets"
                 xmlns:f="http://java.sun.com/jsf/core"
                 xmlns:h="http://java.sun.com/jsf/html"
-                xmlns:a4j="http://richfaces.org/a4j">
+                xmlns:r="http://richfaces.org/rich">
     <ui:define name="content">
         <h:outputStylesheet name="app.css" library="css"/>
         <h:outputStylesheet name="mobile.css" library="css"/>
@@ -49,12 +49,12 @@
                     }
                     }
                 </h:outputScript>
-                <a4j:jsFunction name="loadPage"
+                <r:jsFunction name="loadPage"
                                 data="${symbol_pound}{pageBean.location}"
                                 render="@form"
                                 oncomplete="slidfast.core.slideTo('app-page')">
-                    <a4j:param name="page" assignTo="${symbol_pound}{pageBean.location}"/>
-                </a4j:jsFunction>
+                    <r:param name="page" assignTo="${symbol_pound}{pageBean.location}"/>
+                </r:jsFunction>
 
                 <div id="page-container">
                     <div id="home-page" class="page stage-left">
@@ -69,9 +69,9 @@
             </h:form>
         </div>
 
-        <a4j:push id="push" address="pushCdi" ondataavailable="showMessage(event.rf.data)">
-            <a4j:ajax event="dataavailable" render="mobileForm:membersPanel"/>
-        </a4j:push>
+        <r:push id="push" address="pushCdi" ondataavailable="showMessage(event.rf.data)">
+            <r:ajax event="dataavailable" render="mobileForm:membersPanel"/>
+        </r:push>
 
     </ui:define>
 </ui:composition>

@@ -130,10 +130,10 @@
                         id = hashArray[0].replace('#', '');
                         sample = hashArray[1];
                         try{
-                        //method defined in a4j:jsFunction
+                        //method defined in r:jsFunction
                         handleHashChange(id, sample);
                         }catch(e){
-                           alert('you must define an a4j:jsFunction component with name=\"handleHashChange\"')
+                           alert('you must define an r:jsFunction component with name=\"handleHashChange\"')
                         }
                         if(backButtonID){
                             //show the back button and attach functions

@@ -94,12 +94,8 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.richfaces.ui</groupId>
-            <artifactId>richfaces-components-ui</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.richfaces.core</groupId>
-            <artifactId>richfaces-core-impl</artifactId>
+            <groupId>org.richfaces</groupId>
+            <artifactId>richfaces</artifactId>
         </dependency>
 #if ($enterprise == "true" || $enterprise == "y" || $enterprise == "yes" )
         <dependency>
@@ -133,33 +129,11 @@
         </dependency>
 #else
         <dependency>
-            <groupId>javax.faces</groupId>
-            <artifactId>javax.faces-api</artifactId>
+            <groupId>org.jboss.spec</groupId>
+            <artifactId>jboss-javaee-web-6.0</artifactId>
+            <version>3.0.1.Final</version>
+            <type>pom</type>
             <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.glassfish</groupId>
-            <artifactId>javax.faces</artifactId>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>javax.servlet-api</artifactId>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>javax.servlet.jsp</groupId>
-            <artifactId>jsp-api</artifactId>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>javax.el</groupId>
-            <artifactId>el-api</artifactId>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>javax.servlet.jsp.jstl</groupId>
-            <artifactId>jstl-api</artifactId>
         </dependency>
 #end
 

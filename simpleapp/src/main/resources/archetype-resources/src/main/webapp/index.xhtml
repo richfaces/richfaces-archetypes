@@ -2,8 +2,11 @@
 #set( $symbol_dollar = '$' )
 #set( $symbol_escape = '\' )
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html" xmlns:f="http://java.sun.com/jsf/core"
-    xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:a4j="http://richfaces.org/a4j">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:r="http://richfaces.org/rich">
 
 <body>
     <ui:composition template="/templates/template.xhtml">
@@ -14,7 +17,7 @@
             <h:form prependId="false">
                 <h:outputLabel value="Name:" for="nameInput" />
                 <h:inputText id="nameInput" value="${symbol_pound}{richBean.name}">
-                    <a4j:ajax event="keyup" render="output" />
+                    <r:ajax event="keyup" render="output" />
                 </h:inputText>
                 <h:panelGroup id="output">
                     <h:outputText value="Hello ${symbol_pound}{richBean.name}!"

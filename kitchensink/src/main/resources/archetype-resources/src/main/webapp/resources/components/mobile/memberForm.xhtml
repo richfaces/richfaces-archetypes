@@ -22,8 +22,7 @@
       xmlns:ui="http://java.sun.com/jsf/facelets"
       xmlns:f="http://java.sun.com/jsf/core"
       xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:a4j="http://richfaces.org/a4j"
-      xmlns:rich="http://richfaces.org/rich"
+      xmlns:r="http://richfaces.org/rich"
       xmlns:composite="http://java.sun.com/jsf/composite">
 
 <!-- INTERFACE -->
@@ -40,13 +39,13 @@
             </td>
             <td>
                 <h:inputText id="name" value="${symbol_pound}{cc.attrs.member.name}">
-                    <rich:validator/>
+                    <r:validator/>
                 </h:inputText>
             </td>
         </tr>
         <tr>
             <td colspan="2">
-                <rich:message for="name" errorClass="invalid"/>
+                <r:message for="name" errorClass="invalid"/>
             </td>
         </tr>
 
@@ -56,13 +55,13 @@
             </td>
             <td>
                 <h:inputText id="email" value="${symbol_pound}{cc.attrs.member.email}">
-                    <rich:validator/>
+                    <r:validator/>
                 </h:inputText>
             </td>
         </tr>
         <tr>
             <td colspan="2">
-                <rich:message for="email" errorClass="invalid"/>
+                <r:message for="email" errorClass="invalid"/>
             </td>
         </tr>
 
@@ -72,13 +71,13 @@
             </td>
             <td>
                 <h:inputText id="phoneNumber" value="${symbol_pound}{cc.attrs.member.phoneNumber}">
-                    <rich:validator/>
+                    <r:validator/>
                 </h:inputText>
             </td>
         </tr>
         <tr>
             <td colspan="2">
-                <rich:message for="phoneNumber" errorClass="invalid"/>
+                <r:message for="phoneNumber" errorClass="invalid"/>
             </td>
         </tr>
 

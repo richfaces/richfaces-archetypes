@@ -30,7 +30,7 @@ import javax.inject.Named;
 
 import ${package}.model.Member;
 import ${package}.service.MemberRegistration;
-import org.richfaces.cdi.push.Push;
+import org.richfaces.push.cdi.Push;
 
 // The @Model stereotype is a convenience mechanism to make this a request-scoped bean that has an
 // EL name

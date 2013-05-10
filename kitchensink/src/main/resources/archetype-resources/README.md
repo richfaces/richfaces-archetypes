@@ -24,7 +24,7 @@ The kitchensink quickstart is built using Vanilla JSF for its front end.  With t
 
 *   Ajax: All page updates are made with an ajax call, increasing the page responsiveness, and leading to a more native **feeling** application.
 
-*   Client-side validation: By simply nesting a <rich:validator /> tag in the input elements, we wire them with RichFaces client-side validation capabilities.  The inputs are validated locally using javascript, without requiring a round-trip to the server.
+*   Client-side validation: By simply nesting a <r:validator /> tag in the input elements, we wire them with RichFaces client-side validation capabilities.  The inputs are validated locally using javascript, without requiring a round-trip to the server.
 
 *   Popups: Click the view link next to a member in the member list to view a popup with the member details.  To close the popup, click the "X" in the top right-hand corner, or click anywhere on the background mask.
 
