@@ -53,23 +53,35 @@
     </properties>
 
     <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <inherited>false</inherited>
+                <configuration>
+                    <preparationGoals>clean verify -Prelease -Prelease-preparation</preparationGoals>
+                    <completionGoals>clean verify -Prelease-completion -DskipTests=true</completionGoals>
+                    <arguments>-Prelease -Pjboss-release -DoldVersion=${project.version} -DreleaseVersion=${releaseVersion}
+                        -DdevelopmentVersion=${developmentVersion}</arguments>
+                    <!-- All sub-modules will have same version -->
+                    <autoVersionSubmodules>true</autoVersionSubmodules>
+                    <!-- During release:perform, enable the "release" profile -->
+                    <releaseProfiles>release</releaseProfiles>
+                    <!-- Some modules (dist) need release items installed during prepare -->
+                    <preparationGoals>clean install</preparationGoals>
+                    <!-- Use a local checkout instead of doing a checkout from the upstream repository -->
+                    <localCheckout>true</localCheckout>
+                    <!-- Will not push changes to the upstream repository -->
+                    <pushChanges>false</pushChanges>
+                </configuration>
+            </plugin>
+        </plugins>
         <pluginManagement>
             <plugins>
                 <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-release-plugin</artifactId>
-                    <configuration>
-                        <!-- All sub-modules will have same version -->
-                        <autoVersionSubmodules>true</autoVersionSubmodules>
-                        <!-- During release:perform, enable the "release" profile -->
-                        <releaseProfiles>release</releaseProfiles>
-                        <!-- Some modules (dist) need release items installed during prepare -->
-                        <preparationGoals>clean install</preparationGoals>
-                        <!-- Use a local checkout instead of doing a checkout from the upstream repository -->
-                        <localCheckout>true</localCheckout>
-                        <!-- Will not push changes to the upstream repository -->
-                        <pushChanges>false</pushChanges>
-                    </configuration>
+                    <groupId>com.google.code.maven-replacer-plugin</groupId>
+                    <artifactId>replacer</artifactId>
+                    <version>1.5.2</version>
                 </plugin>
             </plugins>
         </pluginManagement>
@@ -117,5 +129,119 @@
         <developerConnection>scm:git:git@github.com:richfaces/richfaces-archetypes.git</developerConnection>
         <url>https://github.com/richfaces/richfaces-archetypes</url>
     </scm>
+
+    <profiles>
+
+
+        <profile>
+            <id>release-preparation</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>com.google.code.maven-replacer-plugin</groupId>
+                        <artifactId>replacer</artifactId>
+                        <inherited>false</inherited>
+                        <executions>
+                            <execution>
+                                <id>replace-development-version-with-release</id>
+                                <phase>prepare-package</phase>
+                                <goals>
+                                    <goal>replace</goal>
+                                </goals>
+                                <configuration>
+                                    <replacements>
+                                        <replacement>
+                                            <token>${oldVersion}</token>
+                                            <value>${releaseVersion}</value>
+                                        </replacement>
+                                    </replacements>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-scm-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <id>add-changed-files-to-scm</id>
+                                <phase>package</phase>
+                                <goals>
+                                    <goal>add</goal>
+                                </goals>
+                            </execution>
+                            <execution>
+                                <id>commit-changed-files-to-scm</id>
+                                <phase>package</phase>
+                                <goals>
+                                    <goal>checkin</goal>
+                                </goals>
+                                <configuration>
+                                    <message>[maven-release-plugin] prepare regular files for release ${releaseVersion}</message>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+
+        <profile>
+            <id>release-completion</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>com.google.code.maven-replacer-plugin</groupId>
+                        <artifactId>replacer</artifactId>
+                        <inherited>false</inherited>
+                        <executions>
+                            <execution>
+                                <id>replace-release-version-with-development</id>
+                                <phase>prepare-package</phase>
+                                <goals>
+                                    <goal>replace</goal>
+                                </goals>
+                                <configuration>
+                                    <replacements>
+                                        <replacement>
+                                            <token>${oldVersion}</token>
+                                            <value>${developmentVersion}</value>
+                                        </replacement>
+                                        <replacement>
+                                            <token>${releaseVersion}</token>
+                                            <value>${developmentVersion}</value>
+                                        </replacement>
+                                    </replacements>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-scm-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <id>add-changed-files-to-scm</id>
+                                <phase>package</phase>
+                                <goals>
+                                    <goal>add</goal>
+                                </goals>
+                            </execution>
+                            <execution>
+                                <id>commit-changed-files-to-scm</id>
+                                <phase>package</phase>
+                                <goals>
+                                    <goal>checkin</goal>
+                                </goals>
+                                <configuration>
+                                    <message>[maven-release-plugin] prepare regular files for next development iteration</message>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
 
 </project>
