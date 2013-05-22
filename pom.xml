@@ -52,7 +52,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         
         <!-- Release -->
-        <regular.files.which.contains.version>components/component-short/src/main/resources/META-INF/maven/archetype-metadata.xml,components/components-aggregator/src/main/resources/META-INF/maven/archetype-metadata.xml,components/component/src/main/resources/META-INF/maven/archetype-metadata.xml,kitchensink/src/main/resources/META-INF/maven/archetype-metadata.xml,kitchensink/src/test/resources/projects/basic/archetype.properties</regular.files.which.contains.version>
+        <regular.files.which.contains.version>components/component-short/src/main/resources/META-INF/maven/archetype-metadata.xml,components/components-aggregator/src/main/resources/META-INF/maven/archetype-metadata.xml,components/component/src/main/resources/META-INF/maven/archetype-metadata.xml,kitchensink/src/main/resources/META-INF/maven/archetype-metadata.xml,kitchensink/src/test/resources/projects/basic/archetype.properties,simpleapp/src/main/resources/META-INF/maven/archetype-metadata.xml</regular.files.which.contains.version>
     </properties>
 
     <build>

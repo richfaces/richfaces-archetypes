@@ -15,10 +15,6 @@
     <name>RichFaces Archetypes Simple Application</name>
     <version>5.0.0-SNAPSHOT</version>
 
-    <properties>
-        <richfaces-default-version>5.0.0-SNAPSHOT</richfaces-default-version>
-    </properties>
-
     <build>
         <extensions>
             <extension>
