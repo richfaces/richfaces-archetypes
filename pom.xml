@@ -50,6 +50,9 @@
         <!-- TODO verify if these are needed here - I believe they are inherited from parent -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        
+        <!-- Release -->
+        <regular.files.which.contains.version>components/component-short/src/main/resources/META-INF/maven/archetype-metadata.xml,components/components-aggregator/src/main/resources/META-INF/maven/archetype-metadata.xml,components/component/src/main/resources/META-INF/maven/archetype-metadata.xml,kitchensink/src/main/resources/META-INF/maven/archetype-metadata.xml,kitchensink/src/test/resources/projects/basic/archetype.properties</regular.files.which.contains.version>
     </properties>
 
     <build>
@@ -73,6 +76,23 @@
                     <localCheckout>true</localCheckout>
                     <!-- Will not push changes to the upstream repository -->
                     <pushChanges>false</pushChanges>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>com.google.code.maven-replacer-plugin</groupId>
+                <artifactId>replacer</artifactId>
+                <inherited>false</inherited>
+                <configuration>
+                    <filesToInclude>${regular.files.which.contains.version}</filesToInclude>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-scm-plugin</artifactId>
+                <inherited>false</inherited>
+                <configuration>
+                    <pushChanges>false</pushChanges>
+                    <includes>${regular.files.which.contains.version}</includes>
                 </configuration>
             </plugin>
         </plugins>
