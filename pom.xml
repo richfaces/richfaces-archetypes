@@ -23,17 +23,19 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>org.richfaces</groupId>
-        <artifactId>richfaces-parent</artifactId>
-        <version>13</version>
-        <relativePath>../parent/pom.xml</relativePath>
+        <groupId>org.jboss</groupId>
+        <artifactId>jboss-parent</artifactId>
+        <version>10</version>
     </parent>
 
     <groupId>org.richfaces.archetypes</groupId>
-    <artifactId>archetypes-aggregator</artifactId>
+    <artifactId>richfaces-archetypes-parent</artifactId>
     <version>5.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
-    <name>RichFaces Archetypes Aggregator</name>
+
+    <name>RichFaces Archetypes Parent</name>
+    <description>A parent for RichFaces archetypes</description>
+
 
     <modules>
         <module>simpleapp</module>
@@ -50,10 +52,70 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
 
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-release-plugin</artifactId>
+                    <configuration>
+                        <!-- All sub-modules will have same version -->
+                        <autoVersionSubmodules>true</autoVersionSubmodules>
+                        <!-- During release:perform, enable the "release" profile -->
+                        <releaseProfiles>release</releaseProfiles>
+                        <!-- Some modules (dist) need release items installed during prepare -->
+                        <preparationGoals>clean install</preparationGoals>
+                        <!-- Use a local checkout instead of doing a checkout from the upstream repository -->
+                        <localCheckout>true</localCheckout>
+                        <!-- Will not push changes to the upstream repository -->
+                        <pushChanges>false</pushChanges>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+
+    <url>http://richfaces.org</url>
+
+    <licenses>
+        <license>
+            <name>GNU Lesser General Public License, Version 2.1</name>
+            <distribution>repo</distribution>
+            <url>http://www.gnu.org/licenses/lgpl-2.1.txt</url>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <name>RichFaces committers</name>
+        </developer>
+    </developers>
+
+    <issueManagement>
+        <system>jira</system>
+        <url>https://jira.jboss.org/jira/browse/RF</url>
+    </issueManagement>
+
+    <mailingLists>
+        <mailingList>
+            <name>RichFaces User Forums</name>
+            <archive>http://community.jboss.org/en/richfaces</archive>
+        </mailingList>
+        <mailingList>
+            <name>RichFaces Developer Forums</name>
+            <archive>http://community.jboss.org/en/richfaces/dev</archive>
+        </mailingList>
+    </mailingLists>
+
+    <distributionManagement>
+        <!-- Other items inherited from jboss-parent -->
+        <downloadUrl>http://www.jboss.org/richfaces/download</downloadUrl>
+    </distributionManagement>
+
     <scm>
-        <connection>scm:git:git://github.com/richfaces/archetypes.git</connection>
-        <developerConnection>scm:git:git@github.com:richfaces/archetypes.git</developerConnection>
-        <url>https://github.com/richfaces/archetypes</url>
+        <connection>scm:git:git://github.com/richfaces/richfaces-archetypes.git</connection>
+        <developerConnection>scm:git:git@github.com:richfaces/richfaces-archetypes.git</developerConnection>
+        <url>https://github.com/richfaces/richfaces-archetypes</url>
     </scm>
 
 </project>
