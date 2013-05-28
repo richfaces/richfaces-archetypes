@@ -46,10 +46,10 @@
 
         <!-- Define the version of the JBoss BOMs we want to import to specify tested stacks. -->
 #if ($enterprise == "true" || $enterprise == "y" || $enterprise == "yes" )
-        <version.richfaces.bom>${richfaces-enterprise-version}</version.richfaces.bom>
+        <version.richfaces>${richfaces-enterprise-version}</version.richfaces>
         <version.jboss.bom>${jboss-bom-enterprise-version}</version.jboss.bom>
 #else
-        <version.richfaces.bom>${richfaces-version}</version.richfaces.bom>
+        <version.richfaces>${richfaces-version}</version.richfaces>
         <version.jboss.bom>${jboss-bom-version}</version.jboss.bom>
 #end
        <org.ocpsoft.rewrite.version>1.0.4.Final</org.ocpsoft.rewrite.version>
@@ -85,15 +85,6 @@
                 <groupId>org.jboss.bom</groupId>
                 <artifactId>jboss-javaee-6.0-with-hibernate</artifactId>
                 <version>${version.jboss.bom}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-            <!-- Similarly to the JBoss Java EE 6 BOM above, the RichFaces BOM specifies the
-                versions of artifacts required for using RichFaces in your project. -->
-            <dependency>
-                <groupId>org.richfaces</groupId>
-                <artifactId>richfaces-bom</artifactId>
-                <version>${version.richfaces.bom}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -174,18 +165,15 @@
         <dependency>
             <groupId>org.richfaces</groupId>
             <artifactId>richfaces</artifactId>
+            <version>${version.richfaces}</version>
         </dependency>
 
         <!-- Import the Atmosphere framework for r:push -->
         <dependency>
-            <groupId>org.atmosphere</groupId>
-            <artifactId>atmosphere-runtime</artifactId>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.slf4j</groupId>
-                    <artifactId>slf4j-api</artifactId>
-                </exclusion>
-            </exclusions>
+            <groupId>org.richfaces</groupId>
+            <artifactId>richfaces-push-depchain</artifactId>
+            <version>${version.richfaces}</version>
+            <type>pom</type>
         </dependency>
 
         <!-- Now we declare any tools needed -->
