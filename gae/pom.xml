@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <parent>
         <groupId>org.richfaces.archetypes</groupId>
         <artifactId>richfaces-archetypes-parent</artifactId>
-        <version>5.0.0-SNAPSHOT</version>
+        <version>5.0.0.Alpha1</version>
     </parent>
 
     <description>This archetype creates a simple RichFaces 5 application with all the settings and custom artifacts you need to
@@ -14,7 +13,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.richfaces.archetypes</groupId>
     <artifactId>richfaces-archetype-gae</artifactId>
-    <version>5.0.0-SNAPSHOT</version>
+    <version>5.0.0.Alpha1</version>
     <packaging>maven-archetype</packaging>
     <name>RichFaces Archetypes GAE Application</name>
 
@@ -53,6 +52,7 @@
         <connection>scm:git:git://github.com/richfaces/archetypes.git</connection>
         <developerConnection>scm:git:git@github.com:richfaces/archetypes.git</developerConnection>
         <url>https://github.com/richfaces/archetypes</url>
-    </scm>
+      <tag>5.0.0.Alpha1</tag>
+  </scm>
 </project>
 
