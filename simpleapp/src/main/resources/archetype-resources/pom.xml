@@ -9,7 +9,7 @@
 
     <groupId>${groupId}</groupId>
     <artifactId>${artifactId}</artifactId>
-    <name>RichFaces 4 Application</name>
+    <name>RichFaces 5 Application</name>
     <version>${version}</version>
     <packaging>war</packaging>
 

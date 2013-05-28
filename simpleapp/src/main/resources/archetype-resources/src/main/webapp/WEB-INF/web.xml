@@ -3,7 +3,7 @@
          xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID"
          version="3.0">
 
-    <display-name>Sample RichFaces 4 Application</display-name>
+    <display-name>Sample RichFaces 5 Application</display-name>
 
     <context-param>
         <param-name>javax.faces.PROJECT_STAGE</param-name>
