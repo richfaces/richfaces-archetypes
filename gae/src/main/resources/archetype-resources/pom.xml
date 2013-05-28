@@ -36,7 +36,7 @@
         <!-- Setting this property using archetype-metadata.xml requiredPorperty
              so that generated project uses correct version of richfaces.
          -->
-        <org.richfaces.bom.version>${richfaces-version}</org.richfaces.bom.version>
+        <org.richfaces.version>${richfaces-version}</org.richfaces.version>
         <gae.version>1.4.0</gae.version>
     </properties>
 
@@ -121,26 +121,11 @@
         </profile>
     </profiles>
 
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>org.richfaces</groupId>
-                <artifactId>richfaces-bom</artifactId>
-                <version>${org.richfaces.bom.version}</version>
-                <scope>import</scope>
-                <type>pom</type>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
-
     <dependencies>
         <dependency>
-            <groupId>org.richfaces.ui</groupId>
-            <artifactId>richfaces-components-ui</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.richfaces.core</groupId>
-            <artifactId>richfaces-core-impl</artifactId>
+            <groupId>org.richfaces</groupId>
+            <artifactId>richfaces</artifactId>
+            <version>${org.richfaces.version}</version>
         </dependency>
 
         <dependency>

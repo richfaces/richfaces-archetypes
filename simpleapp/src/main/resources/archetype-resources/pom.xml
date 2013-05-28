@@ -60,9 +60,9 @@
              so that generated project uses correct version of richfaces.
          -->
 #if ($enterprise == "true" || $enterprise == "y" || $enterprise == "yes" )
-        <org.richfaces.bom.version>${richfaces-enterprise-version}</org.richfaces.bom.version>
+        <org.richfaces.version>${richfaces-enterprise-version}</org.richfaces.version>
 #else
-        <org.richfaces.bom.version>${richfaces-version}</org.richfaces.bom.version>
+        <org.richfaces.version>${richfaces-version}</org.richfaces.version>
 #end
     </properties>
 
@@ -85,7 +85,7 @@
             <dependency>
                 <groupId>org.richfaces</groupId>
                 <artifactId>richfaces-bom</artifactId>
-                <version>${org.richfaces.bom.version}</version>
+                <version>${org.richfaces.version}</version>
                 <scope>import</scope>
                 <type>pom</type>
             </dependency>
@@ -96,6 +96,7 @@
         <dependency>
             <groupId>org.richfaces</groupId>
             <artifactId>richfaces</artifactId>
+            <version>${org.richfaces.version}</version>
         </dependency>
 #if ($enterprise == "true" || $enterprise == "y" || $enterprise == "yes" )
         <dependency>
