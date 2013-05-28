@@ -9,13 +9,13 @@
             <defaultValue>y</defaultValue>
         </requiredProperty>
         <requiredProperty key="richfaces-version">
-            <defaultValue>5.0.0.Alpha1</defaultValue>
+            <defaultValue>5.0.0-SNAPSHOT</defaultValue>
         </requiredProperty>
         <requiredProperty key="enterprise">
             <defaultValue>n</defaultValue>
         </requiredProperty>
         <requiredProperty key="richfaces-enterprise-version">
-            <defaultValue>5.0.0.Alpha1-redhat-1</defaultValue>
+            <defaultValue>5.0.0-SNAPSHOT-redhat-1</defaultValue>
         </requiredProperty>
         <requiredProperty key="mobile-optimized">
             <defaultValue>n</defaultValue>

@@ -36,7 +36,7 @@
             <defaultValue>${name}-ui</defaultValue>
         </requiredProperty>
         <requiredProperty key="version">
-            <defaultValue>5.0.0.Alpha1</defaultValue>
+            <defaultValue>5.0.0-SNAPSHOT</defaultValue>
         </requiredProperty>
     </requiredProperties>
 
