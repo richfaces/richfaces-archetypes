@@ -23,6 +23,12 @@
                     <h:outputText value="Hello ${symbol_pound}{richBean.name}!"
                         rendered="${symbol_pound}{not empty richBean.name}" />
                 </h:panelGroup>
+                #if ($mobile-optimized == true)
+                <div id="page-container">
+                  <div id="home-page" class="page stage-left">
+                  </div>
+                </div>
+                #end
             </h:form>
         </ui:define>
     </ui:composition>
