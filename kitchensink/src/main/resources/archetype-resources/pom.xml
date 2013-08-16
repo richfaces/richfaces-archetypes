@@ -21,7 +21,7 @@
     <artifactId>${artifactId}</artifactId>
     <version>${version}</version>
     <packaging>war</packaging>
-    <name>JBoss AS Quickstarts: Kitchensink-rf</name>
+    <name>JBoss WFK Quickstart: kitchensink-richfaces</name>
     <description>A starter Java EE 6 webapp project for use on JBoss AS 7 / EAP 6, generated from the jboss-javaee6-webapp archetype</description>
 
     <url>http://jboss.org/richfaces</url>
@@ -46,17 +46,17 @@
 
         <!-- Define the version of the JBoss BOMs we want to import to specify tested stacks. -->
 #if ($enterprise == "true" || $enterprise == "y" || $enterprise == "yes" )
-        <version.richfaces.bom>${richfaces-enterprise-version}</version.richfaces.bom>
+        <version.richfaces>${richfaces-enterprise-version}</version.richfaces>
         <version.jboss.bom>${jboss-bom-enterprise-version}</version.jboss.bom>
 #else
-        <version.richfaces.bom>${richfaces-version}</version.richfaces.bom>
+        <version.richfaces>${richfaces-version}</version.richfaces>
         <version.jboss.bom>${jboss-bom-version}</version.jboss.bom>
 #end
 
         <!-- other plugin versions -->
-        <compiler.plugin.version>2.3.1</compiler.plugin.version>
-        <surefire.plugin.version>2.4.3</surefire.plugin.version>
-        <war.plugin.version>2.1.1</war.plugin.version>
+        <version.compiler.plugin>2.3.1</version.compiler.plugin>
+        <version.surefire.plugin>2.10</version.surefire.plugin>
+        <version.war.plugin>2.1.1</version.war.plugin>
 
         <!-- maven-compiler-plugin -->
         <maven.compiler.target>1.6</maven.compiler.target>
@@ -92,7 +92,7 @@
             <dependency>
                 <groupId>org.richfaces</groupId>
                 <artifactId>richfaces-bom</artifactId>
-                <version>${version.richfaces.bom}</version>
+                <version>${version.richfaces}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -255,7 +255,7 @@
                 annotation processors -->
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>${compiler.plugin.version}</version>
+                <version>${version.compiler.plugin}</version>
                 <configuration>
                     <source>${maven.compiler.source}</source>
                     <target>${maven.compiler.target}</target>
@@ -263,7 +263,7 @@
             </plugin>
             <plugin>
                 <artifactId>maven-war-plugin</artifactId>
-                <version>${war.plugin.version}</version>
+                <version>${version.war.plugin}</version>
                 <configuration>
                     <!-- Java EE 6 doesn't require web.xml, Maven needs to
                         catch up! -->
@@ -295,7 +295,7 @@
                 <plugins>
                     <plugin>
                         <artifactId>maven-surefire-plugin</artifactId>
-                        <version>${surefire.plugin.version}</version>
+                        <version>${version.surefire.plugin}</version>
                         <configuration>
                             <skip>true</skip>
                         </configuration>
@@ -347,7 +347,7 @@
                 <plugins>
                     <plugin>
                         <artifactId>maven-war-plugin</artifactId>
-                        <version>${war.plugin.version}</version>
+                        <version>${version.war.plugin}</version>
                         <configuration>
                             <outputDirectory>deployments</outputDirectory>
                             <warName>ROOT</warName>
