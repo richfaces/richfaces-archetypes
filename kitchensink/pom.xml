@@ -13,7 +13,7 @@
     <groupId>org.richfaces.archetypes</groupId>
     <artifactId>richfaces-archetype-kitchensink</artifactId>
     <packaging>maven-archetype</packaging>
-    <version>4.3.4.Final</version>
+    <version>4.3.4.Final-1</version>
 
     <name>RichFaces Archetypes Kitchen Sink Application</name>
 
