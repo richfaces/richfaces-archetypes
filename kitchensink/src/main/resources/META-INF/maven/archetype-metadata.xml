@@ -18,7 +18,7 @@
             <defaultValue>4.3.4.Final-redhat-1</defaultValue>
         </requiredProperty>
         <requiredProperty key="jboss-bom-enterprise-version-eap">
-            <defaultValue>1.0.4.Final-redhat-wfk-3</defaultValue>
+            <defaultValue>1.0.4.Final-redhat-9</defaultValue>
         </requiredProperty>
         <requiredProperty key="jboss-bom-enterprise-version-wfk">
             <defaultValue>2.4.0-redhat-2</defaultValue>
