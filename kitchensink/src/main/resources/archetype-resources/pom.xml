@@ -47,7 +47,8 @@
         <!-- Define the version of the JBoss BOMs we want to import to specify tested stacks. -->
 #if ($enterprise == "true" || $enterprise == "y" || $enterprise == "yes" )
         <version.richfaces>${richfaces-enterprise-version}</version.richfaces>
-        <version.jboss.bom>${jboss-bom-enterprise-version}</version.jboss.bom>
+        <version.jboss.bom.eap>${jboss-bom-enterprise-version-eap}</version.jboss.bom.eap>
+        <version.jboss.bom.wfk>${jboss-bom-enterprise-version-wfk}</version.jboss.bom.wfk>
 #else
         <version.richfaces>${richfaces-version}</version.richfaces>
         <version.jboss.bom>${jboss-bom-version}</version.jboss.bom>
@@ -73,16 +74,16 @@
                 stack you can read this as the JBoss stack of the Java EE 6 APIs, with extras
                 from the Hibernate family of projects) -->
             <dependency>
-                <groupId>org.jboss.bom</groupId>
+                <groupId>org.jboss.bom.wfk</groupId>
                 <artifactId>jboss-javaee-6.0-with-tools</artifactId>
-                <version>${version.jboss.bom}</version>
+                <version>${version.jboss.bom.wfk}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
             <dependency>
                 <groupId>org.jboss.bom</groupId>
                 <artifactId>jboss-javaee-6.0-with-hibernate</artifactId>
-                <version>${version.jboss.bom}</version>
+                <version>${version.jboss.bom.eap}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
