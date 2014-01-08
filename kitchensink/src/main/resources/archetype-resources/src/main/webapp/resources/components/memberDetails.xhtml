@@ -1,6 +1,3 @@
-#set( $symbol_pound = '#' )
-#set( $symbol_dollar = '$' )
-#set( $symbol_escape = '\' )
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
     JBoss, Home of Professional Open Source
@@ -35,13 +32,13 @@
 <composite:implementation>
     <h:panelGrid columns="2" columnClasses="titleCell">
         <h:outputLabel for="name" value="Name:"/>
-        <h:outputText id="name" value="${symbol_pound}{cc.attrs.member.name}"/>
+        <h:outputText id="name" value="#{cc.attrs.member.name}"/>
 
         <h:outputLabel for="email" value="Email:"/>
-        <h:outputText id="email" value="${symbol_pound}{cc.attrs.member.email}"/>
+        <h:outputText id="email" value="#{cc.attrs.member.email}"/>
 
-        <h:outputLabel for="phoneNumber" value="Phone ${symbol_pound}:"/>
-        <h:outputText id="phoneNumber" value="${symbol_pound}{cc.attrs.member.phoneNumber}"/>
+        <h:outputLabel for="phoneNumber" value="Phone #:"/>
+        <h:outputText id="phoneNumber" value="#{cc.attrs.member.phoneNumber}"/>
     </h:panelGrid>
 </composite:implementation>
 </html>

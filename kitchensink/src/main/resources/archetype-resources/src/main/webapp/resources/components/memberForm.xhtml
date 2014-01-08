@@ -1,6 +1,3 @@
-#set( $symbol_pound = '#' )
-#set( $symbol_dollar = '$' )
-#set( $symbol_escape = '\' )
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
     JBoss, Home of Professional Open Source
@@ -35,19 +32,19 @@
 <composite:implementation>
     <h:panelGrid columns="3" columnClasses="titleCell">
         <h:outputLabel for="name" value="Name:"/>
-        <h:inputText id="name" value="${symbol_pound}{cc.attrs.member.name}">
+        <h:inputText id="name" value="#{cc.attrs.member.name}">
             <rich:validator/>
         </h:inputText>
         <rich:message for="name" errorClass="invalid"/>
 
         <h:outputLabel for="email" value="Email:"/>
-        <h:inputText id="email" value="${symbol_pound}{cc.attrs.member.email}">
+        <h:inputText id="email" value="#{cc.attrs.member.email}">
             <rich:validator/>
         </h:inputText>
         <rich:message for="email" errorClass="invalid"/>
 
-        <h:outputLabel for="phoneNumber" value="Phone ${symbol_pound}:"/>
-        <h:inputText id="phoneNumber" value="${symbol_pound}{cc.attrs.member.phoneNumber}">
+        <h:outputLabel for="phoneNumber" value="Phone #:"/>
+        <h:inputText id="phoneNumber" value="#{cc.attrs.member.phoneNumber}">
             <rich:validator/>
         </h:inputText>
         <rich:message for="phoneNumber" errorClass="invalid"/>

@@ -1,6 +1,3 @@
-#set( $symbol_pound = '#' )
-#set( $symbol_dollar = '$' )
-#set( $symbol_escape = '\' )
 /*
  * JBoss, Home of Professional Open Source
  * Copyright 2013, Red Hat, Inc. and/or its affiliates, and individual
@@ -62,7 +59,7 @@
  //   Source Files: http://code.google.com/p/mobileesp/
  //
  //   Versions of this code are available for:
- //      PHP, JavaScript, Java, ASP.NET (C${symbol_pound}), and Ruby
+ //      PHP, JavaScript, Java, ASP.NET (C#), and Ruby
  //
  // *******************************************
  */

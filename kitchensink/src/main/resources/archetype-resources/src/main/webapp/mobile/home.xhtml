@@ -1,6 +1,3 @@
-#set( $symbol_pound = '#' )
-#set( $symbol_dollar = '$' )
-#set( $symbol_escape = '\' )
 <!--
     JBoss, Home of Professional Open Source
     Copyright 2013, Red Hat, Inc. and/or its affiliates, and individual
@@ -27,7 +24,7 @@
                 xmlns:rich="http://richfaces.org/rich"
                 xmlns:my="http://java.sun.com/jsf/composite/components">
     <h:panelGroup id="homePanel" layout="block">
-        <rich:panelMenu activeItem="${symbol_pound}{demoNavigator.currentDemo.id}">
+        <rich:panelMenu activeItem="#{demoNavigator.currentDemo.id}">
             <div class="mobileContent">
                 <h1>Welcome to Red Hat JBoss Enterprise Application Platform!</h1>
 

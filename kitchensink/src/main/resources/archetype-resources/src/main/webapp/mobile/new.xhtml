@@ -1,6 +1,3 @@
-#set( $symbol_pound = '#' )
-#set( $symbol_dollar = '$' )
-#set( $symbol_escape = '\' )
 <!--
     JBoss, Home of Professional Open Source
     Copyright 2013, Red Hat, Inc. and/or its affiliates, and individual
@@ -28,9 +25,9 @@
                 xmlns:mobile="http://java.sun.com/jsf/composite/components/mobile">
     <h:panelGroup id="newMemberPanel" layout="block" styleClass="mobileContent">
         <br/>
-        <mobile:memberForm id="memberForm" member="${symbol_pound}{newMember}"/>
-        <a4j:commandButton id="register" action="${symbol_pound}{memberController.register}" value="Register"
-                           oncomplete="if ( ${symbol_pound}{not facesContext.validationFailed} ) location.hash='list'"
+        <mobile:memberForm id="memberForm" member="#{newMember}"/>
+        <a4j:commandButton id="register" action="#{memberController.register}" value="Register"
+                           oncomplete="if ( #{not facesContext.validationFailed} ) location.hash='list'"
                            execute="@form" render="newMemberPanel"/>
         <rich:messages globalOnly="true"/>
     </h:panelGroup>

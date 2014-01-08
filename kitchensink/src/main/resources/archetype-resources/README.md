@@ -1,9 +1,9 @@
-kitchensink-rf: Example Using Multiple Java EE 6 Technologies with RichFaces
+${artifactId}: Example Using Multiple Java EE 6 Technologies with RichFaces
 ========================
 Author: Pete Muir, Brian Leathem
 Level: Intermediate
 Technologies: CDI, JSF, JPA, EJB, JPA, JAX-RS, BV, RichFaces
-Summary: The canonical JSF kitchensink quickstart implemented with JSF and RichFaces
+Summary: The canonical JSF ${artifactId} implemented with JSF and RichFaces
 Target Product: WFK
 Product Versions: EAP 6.1, EAP 6.2, WFK 2.4
 Source: <https://github.com/richfaces/jdf-quickstarts>
@@ -17,7 +17,7 @@ This project is setup to allow you to create a compliant Java EE 6 application u
 
 This application builds on top of the standard JSF approach, by incorporating the RichFaces project to provide a set of components, allowing for a rich user experience.  RichFaces builds on top of the JSF standard, and is a fully portable solution compatible with all JSF implementations.
 
-The kitchensink quickstart is built using Vanilla JSF for its front end.  With this kitchensink-rf quickstart, we build on top of the JSF user interface, augmenting it with RichFaces JSF components and capabilities.  Some key points to make note of while running the application:
+The ${artifactId} is built using Vanilla JSF for its front end.  With this ${artifactId} quickstart, we build on top of the JSF user interface, augmenting it with RichFaces JSF components and capabilities.  Some key points to make note of while running the application:
 
 *   Ajax push: This application makes use of ajax push.  When a member is created in one browser, the member list is updated in **all** open browsers.
 
@@ -29,7 +29,7 @@ The kitchensink quickstart is built using Vanilla JSF for its front end.  With t
 
 *   Popups: Click the view link next to a member in the member list to view a popup with the member details.  To close the popup, click the "X" in the top right-hand corner, or click anywhere on the background mask.
 
-*   Mobile support: view the application form a webkit powered browser on a mobile device to try out the mobile version of the application.  Alternatively, view the mobile version on your desktop by navigating to the url: <http://localhost:8080/jboss-kitchensink-rf/mobile/>
+*   Mobile support: view the application form a webkit powered browser on a mobile device to try out the mobile version of the application.  Alternatively, view the mobile version on your desktop by navigating to the url: <http://localhost:8080/${artifactId}/mobile/>
 
 System requirements
 -------------------
@@ -64,13 +64,13 @@ Build and Deploy the Quickstart
 
         mvn clean package jboss-as:deploy
 
-4. This will deploy `target/jboss-kitchensink-rf.war` to the running instance of the server.
+4. This will deploy `target/${artifactId}.war` to the running instance of the server.
 
 
 Access the application
 ---------------------
 
-The application will be running at the following URL: <http://localhost:8080/jboss-kitchensink-rf/>.
+The application will be running at the following URL: <http://localhost:8080/${artifactId}/>.
 
 
 Undeploy the Archive

@@ -51,6 +51,33 @@
                 </plugin>
             </plugins>
         </pluginManagement>
+
+        <plugins>
+            <plugin>
+                <groupId>org.jboss.maven.plugins</groupId>
+                <artifactId>maven-qstools-plugin</artifactId>
+                <version>1.3.2.Final</version>
+                <configuration>
+                    <projectGitRepo>git://github.com/richfaces/jdf-quickstarts.git</projectGitRepo>
+                    <projectPath>kitchensink-rf</projectPath>
+                    <rootPackage>org.jboss.as.quickstarts.kitchensinkrf</rootPackage>
+                    <branch>master</branch>
+                    <archetypeExpressionReplaceValues>
+                        <archetypeExpressionReplaceValue>jboss-kitchensink-rf</archetypeExpressionReplaceValue>
+                        <archetypeExpressionReplaceValue>kitchensink quickstart</archetypeExpressionReplaceValue>
+                        <archetypeExpressionReplaceValue>JBoss WFK Quickstart: kitchensink-richfaces</archetypeExpressionReplaceValue>
+                    </archetypeExpressionReplaceValues>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>archetypeSync</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
     </build>
 
     <scm>

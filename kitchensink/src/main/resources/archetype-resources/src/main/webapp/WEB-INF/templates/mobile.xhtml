@@ -1,6 +1,3 @@
-#set( $symbol_pound = '#' )
-#set( $symbol_dollar = '$' )
-#set( $symbol_escape = '\' )
 <!--
     JBoss, Home of Professional Open Source
     Copyright 2013, Red Hat, Inc. and/or its affiliates, and individual
@@ -30,9 +27,9 @@
     <meta name="apple-mobile-web-app-capable" content="yes"/>
     <!-- controls the appearance of the status bar in full-screen mode -->
     <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
-    <link rel="stylesheet" href="${symbol_pound}{facesContext.externalContext.requestContextPath}/resources/css/mobile/slidfast.css"/>
+    <link rel="stylesheet" href="#{facesContext.externalContext.requestContextPath}/resources/css/mobile/slidfast.css"/>
     <script type="text/javascript"
-            src="${symbol_pound}{facesContext.externalContext.requestContextPath}/resources/js/slidfast.js"></script>
+            src="#{facesContext.externalContext.requestContextPath}/resources/js/slidfast.js"></script>
     <script type="text/javascript">
         //initialize mobile RichFaces with slidfast
         slidfast({
@@ -45,7 +42,7 @@
 </h:head>
 <h:body>
     <link rel="stylesheet"
-          href="${symbol_pound}{facesContext.externalContext.requestContextPath}/resources/css/mobile/rf-mobile-skin.css"/>
+          href="#{facesContext.externalContext.requestContextPath}/resources/css/mobile/rf-mobile-skin.css"/>
     <div id="container">
         <div id="inner">
             <div id="content">

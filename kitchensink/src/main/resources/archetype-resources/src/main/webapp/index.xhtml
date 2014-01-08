@@ -1,6 +1,3 @@
-#set( $symbol_pound = '#' )
-#set( $symbol_dollar = '$' )
-#set( $symbol_escape = '\' )
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
     JBoss, Home of Professional Open Source
@@ -40,10 +37,10 @@
           <rich:panel id="newMemberPanel" styleClass=".form" header="Member Registration" headerClass="header">
               <p>Enforces annotation-based constraints defined on the model class.</p>
 
-              <my:memberForm id="memberForm" member="${symbol_pound}{newMember}"/>
+              <my:memberForm id="memberForm" member="#{newMember}"/>
 
              <h:panelGrid columns="2">
-                <a4j:commandButton id="register" action="${symbol_pound}{memberController.register}" value="Register"
+                <a4j:commandButton id="register" action="#{memberController.register}" value="Register"
                                    styleClass="register" execute="newMemberPanel" render="newMemberPanel"/>
                 <rich:messages globalOnly="true"/>
              </h:panelGrid>
@@ -53,55 +50,55 @@
           <div id="newMemberMessages" class="update"/>
 
           <rich:collapsiblePanel id="memberList" header="Members" headerClass="header" title="Click to expand/collapse">
-             <h:panelGroup rendered="${symbol_pound}{empty members}">
+             <h:panelGroup rendered="#{empty members}">
                 <em>No registered members.</em>
              </h:panelGroup>
-             <rich:dataTable id="memberTable" var="_member" value="${symbol_pound}{members}" rendered="${symbol_pound}{not empty members}" style="width : 100%">
+             <rich:dataTable id="memberTable" var="_member" value="#{members}" rendered="#{not empty members}" style="width : 100%">
                    <rich:column id="view">
                       <a4j:commandLink styleClass="no-decor" render="memberPanel" execute="@this"
-                                       oncomplete="${symbol_pound}{rich:component('memberPopup')}.show()">
+                                       oncomplete="#{rich:component('memberPopup')}.show()">
                          View
-                         <f:setPropertyActionListener target="${symbol_pound}{memberController.member}" value="${symbol_pound}{_member}"/>
+                         <f:setPropertyActionListener target="#{memberController.member}" value="#{_member}"/>
                       </a4j:commandLink>
                    </rich:column>
                    <rich:column id="member_id">
                       <f:facet name="header">Id</f:facet>
-                      ${symbol_pound}{_member.id}
+                      #{_member.id}
                    </rich:column>
                    <rich:column id="member_name">
                       <f:facet name="header">Name</f:facet>
-                      ${symbol_pound}{_member.name}
+                      #{_member.name}
                    </rich:column>
                    <rich:column id="member_email">
                       <f:facet name="header">Email</f:facet>
-                      ${symbol_pound}{_member.email}
+                      #{_member.email}
                    </rich:column>
                    <rich:column id="member_phone">
-                      <f:facet name="header">Phone ${symbol_pound}</f:facet>
-                      ${symbol_pound}{_member.phoneNumber}
+                      <f:facet name="header">Phone #</f:facet>
+                      #{_member.phoneNumber}
                    </rich:column>
                    <rich:column id="member_rest_url">
                       <f:facet name="header">REST URL</f:facet>
-                      <a href="${symbol_pound}{request.contextPath}/rest/members/${symbol_pound}{_member.id}" target="_rest_member">/rest/members/${symbol_pound}{_member.id}</a>
+                      <a href="#{request.contextPath}/rest/members/#{_member.id}" target="_rest_member">/rest/members/#{_member.id}</a>
                    </rich:column>
                    <f:facet name="footer">
-                      REST URL for all members: <a href="${symbol_pound}{request.contextPath}/rest/members" target="_rest_all">/rest/members</a>
+                      REST URL for all members: <a href="#{request.contextPath}/rest/members" target="_rest_all">/rest/members</a>
                    </f:facet>
                 </rich:dataTable>
           </rich:collapsiblePanel>
 
-          <rich:popupPanel id="memberPopup" modal="true" onmaskclick="${symbol_pound}{rich:component('memberPopup')}.hide()"
+          <rich:popupPanel id="memberPopup" modal="true" onmaskclick="#{rich:component('memberPopup')}.hide()"
                            domElementAttachment="form" autosized="true">
              <f:facet name="header">
                 <h:outputText value="Member Details"/>
              </f:facet>
              <f:facet name="controls">
-                <h:outputLink value="${symbol_pound}" onclick="${symbol_pound}{rich:component('memberPopup')}.hide(); return false;">
+                <h:outputLink value="#" onclick="#{rich:component('memberPopup')}.hide(); return false;">
                    X
                 </h:outputLink>
              </f:facet>
              <h:panelGroup id="memberPanel">
-                <my:memberForm member="${symbol_pound}{member}"/>
+                <my:memberForm member="#{member}"/>
              </h:panelGroup>
           </rich:popupPanel>
 
