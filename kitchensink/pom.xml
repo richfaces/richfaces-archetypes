@@ -59,9 +59,7 @@
         <url>https://github.com/richfaces/archetypes</url>
     </scm>
 
-    <description>A starter Java EE 6 webapp project for use on JBoss AS 7 / EAP 6, generated from the
-        jboss-javaee6-webapp archetype
-    </description>
+    <description>JBoss WFK Quickstart: Based on the kitchensink quickstart but adds RichFaces</description>
 
     <url>http://jboss.org/richfaces</url>
 
