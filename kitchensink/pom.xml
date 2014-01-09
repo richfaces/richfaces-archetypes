@@ -68,14 +68,6 @@
                         <archetypeExpressionReplaceValue>JBoss WFK Quickstart: kitchensink-richfaces</archetypeExpressionReplaceValue>
                     </archetypeExpressionReplaceValues>
                 </configuration>
-                <executions>
-                    <execution>
-                        <phase>generate-sources</phase>
-                        <goals>
-                            <goal>archetypeSync</goal>
-                        </goals>
-                    </execution>
-                </executions>
             </plugin>
         </plugins>
     </build>

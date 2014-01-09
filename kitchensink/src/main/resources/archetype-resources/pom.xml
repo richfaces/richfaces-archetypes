@@ -75,6 +75,7 @@
                 tools for your project, such as Arquillian for testing) and the jboss-javaee-6.0-with-hibernate
                 stack you can read this as the JBoss stack of the Java EE 6 APIs, with extras
                 from the Hibernate family of projects) -->
+#if ($enterprise == "true" || $enterprise == "y" || $enterprise == "yes" )
             <dependency>
                 <groupId>org.jboss.bom.wfk</groupId>
                 <artifactId>jboss-javaee-6.0-with-tools</artifactId>
@@ -89,6 +90,22 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+#else
+            <dependency>
+                <groupId>org.jboss.bom</groupId>
+                <artifactId>jboss-javaee-6.0-with-tools</artifactId>
+                <version>${version.jboss.bom}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.jboss.bom</groupId>
+                <artifactId>jboss-javaee-6.0-with-hibernate</artifactId>
+                <version>${version.jboss.bom}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+#end
             <!-- Similarly to the JBoss Java EE 6 BOM above, the RichFaces BOM specifies the
                 versions of artifacts required for using RichFaces in your project. -->
             <dependency>
