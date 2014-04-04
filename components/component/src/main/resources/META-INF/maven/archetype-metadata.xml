@@ -36,7 +36,7 @@
             <defaultValue>${category}-${name}</defaultValue>
         </requiredProperty>
         <requiredProperty key="version">
-            <defaultValue>4.3.6-SNAPSHOT</defaultValue>
+            <defaultValue>4.3.6.Final</defaultValue>
         </requiredProperty>
     </requiredProperties>
 
