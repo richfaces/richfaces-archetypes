@@ -6,7 +6,7 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <requiredProperties>
         <requiredProperty key="richfaces-version">
-            <defaultValue>4.3.7-SNAPSHOT</defaultValue>
+            <defaultValue>4.3.7.Final</defaultValue>
         </requiredProperty>
         <requiredProperty key="jboss-bom-version">
             <defaultValue>1.0.6.Final</defaultValue>
@@ -15,7 +15,7 @@
             <defaultValue>n</defaultValue>
         </requiredProperty>
         <requiredProperty key="richfaces-enterprise-version">
-            <defaultValue>4.3.7-SNAPSHOT-redhat-1</defaultValue>
+            <defaultValue>4.3.7.Final-redhat-1</defaultValue>
         </requiredProperty>
         <requiredProperty key="jboss-bom-enterprise-version-eap">
             <defaultValue>1.0.4.Final-redhat-9</defaultValue>
