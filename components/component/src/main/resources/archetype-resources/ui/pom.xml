@@ -43,13 +43,8 @@
             <version>${project.version}</version>
         </dependency>
         <dependency>
-            <groupId>org.richfaces.core</groupId>
-            <artifactId>richfaces-core-api</artifactId>
-        </dependency>
-        <dependency>
-            <!-- todo remove this dependency or move to test scope -->
-            <groupId>org.richfaces.core</groupId>
-            <artifactId>richfaces-core-impl</artifactId>
+            <groupId>org.richfaces</groupId>
+            <artifactId>richfaces-core</artifactId>
         </dependency>
         <dependency>
             <groupId>org.richfaces.cdk</groupId>

@@ -37,8 +37,8 @@
     <dependencies>
         <!-- runtime -->
         <dependency>
-            <groupId>org.richfaces.core</groupId>
-            <artifactId>richfaces-core-api</artifactId>
+            <groupId>org.richfaces</groupId>
+            <artifactId>richfaces-core</artifactId>
         </dependency>
 
         <!-- JSF with dependencies -->

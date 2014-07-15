@@ -60,10 +60,14 @@
              so that generated project uses correct version of richfaces.
          -->
 #if ($enterprise == "true" || $enterprise == "y" || $enterprise == "yes" )
-        <org.richfaces.bom.version>${richfaces-enterprise-version}</org.richfaces.bom.version>
+        <org.richfaces.version>${richfaces-enterprise-version}</org.richfaces.version>
 #else
-        <org.richfaces.bom.version>${richfaces-version}</org.richfaces.bom.version>
+        <org.richfaces.version>${richfaces-version}</org.richfaces.version>
 #end
+        <version.jsp-api>2.1</version.jsp-api>
+        <version.jstl-api>1.2</version.jstl-api>
+        <version.servlet-api>3.0.1</version.servlet-api>
+        <version.el-api>2.2</version.el-api>
     </properties>
 
     <build>
@@ -84,22 +88,25 @@
         <dependencies>
             <dependency>
                 <groupId>org.richfaces</groupId>
-                <artifactId>richfaces-bom</artifactId>
-                <version>${org.richfaces.bom.version}</version>
-                <scope>import</scope>
+                <artifactId>richfaces-cache-bom</artifactId>
                 <type>pom</type>
+                <version>${org.richfaces.version}</version>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.richfaces</groupId>
+                <artifactId>richfaces-build</artifactId>
+                <type>pom</type>
+                <version>${org.richfaces.version}</version>
+                <scope>import</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>
 
     <dependencies>
         <dependency>
-            <groupId>org.richfaces.ui</groupId>
-            <artifactId>richfaces-components-ui</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.richfaces.core</groupId>
-            <artifactId>richfaces-core-impl</artifactId>
+            <groupId>org.richfaces</groupId>
+            <artifactId>richfaces</artifactId>
         </dependency>
 #if ($enterprise == "true" || $enterprise == "y" || $enterprise == "yes" )
         <dependency>
@@ -145,21 +152,22 @@
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
-            <scope>provided</scope>
+            <version>${version.servlet-api}</version>
         </dependency>
         <dependency>
             <groupId>javax.servlet.jsp</groupId>
             <artifactId>jsp-api</artifactId>
-            <scope>provided</scope>
+            <version>${version.jsp-api}</version>
         </dependency>
         <dependency>
             <groupId>javax.el</groupId>
             <artifactId>el-api</artifactId>
-            <scope>provided</scope>
+            <version>${version.el-api}</version>
         </dependency>
         <dependency>
             <groupId>javax.servlet.jsp.jstl</groupId>
             <artifactId>jstl-api</artifactId>
+            <version>${version.jstl-api}</version>
         </dependency>
 #end
 
