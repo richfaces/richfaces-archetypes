@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.richfaces</groupId>
         <artifactId>richfaces-parent</artifactId>
-        <version>4.5.0.Alpha3</version>
+        <version>4.5.0-SNAPSHOT</version>
         <relativePath>../../build/parent/pom.xml</relativePath>
     </parent>
 
@@ -14,10 +14,10 @@
     <artifactId>richfaces-archetype-simpleapp</artifactId>
     <packaging>maven-archetype</packaging>
     <name>RichFaces Archetypes Simple Application</name>
-    <version>4.5.0.Alpha3</version>
+    <version>4.5.0-SNAPSHOT</version>
 
     <properties>
-        <richfaces-default-version>4.5.0.Alpha3</richfaces-default-version>
+        <richfaces-default-version>4.5.0-SNAPSHOT</richfaces-default-version>
     </properties>
 
     <build>
