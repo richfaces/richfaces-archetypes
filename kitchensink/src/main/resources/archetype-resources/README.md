@@ -1,17 +1,17 @@
 ${artifactId}: Example Using Multiple Java EE 6 Technologies with RichFaces
 ========================
-Author: Pete Muir, Brian Leathem
-Level: Intermediate
-Technologies: CDI, JSF, JPA, EJB, JPA, JAX-RS, BV, RichFaces
-Summary: The canonical JSF ${artifactId} implemented with JSF and RichFaces
-Target Product: WFK
-Product Versions: EAP 6.1, EAP 6.2, WFK 2.4
-Source: <https://github.com/richfaces/jdf-quickstarts>
+Author: Pete Muir, Brian Leathem  
+Level: Intermediate  
+Technologies: CDI, JSF, JPA, EJB, JPA, JAX-RS, BV, RichFaces  
+Summary: The canonical JSF ${artifactId} implemented with JSF and RichFaces  
+Target Product: WFK  
+Product Versions: EAP 6.1, EAP 6.2, WFK 2.5  
+Source: <https://github.com/richfaces/jdf-quickstarts>  
 
 What is it?
 -----------
 
-This is your project! It is a sample, deployable Maven 3 project to help you get your foot in the door developing with Java EE 6 on JBoss Enterprise Application Platform (EAP) 6.1 or later.
+This is your project! It is a sample, deployable Maven 3 project to help you get your foot in the door developing with Java EE 6 on Red Hat JBoss Enterprise Application Platform 6.2 or later.
 
 This project is setup to allow you to create a compliant Java EE 6 application using JSF 2.0 with RichFaces 4, CDI 1.0, EJB 3.1, JPA 2.0 and Bean Validation 1.0. It includes a persistence unit and some sample persistence and transaction code to introduce you to database access in enterprise Java.
 
@@ -34,9 +34,9 @@ The ${artifactId} is built using Vanilla JSF for its front end.  With this ${art
 System requirements
 -------------------
 
-All you need to build this project is Java 6.0 (Java SDK 1.6) or better, Maven 3.0 or better, and the RichFaces library.
+The application this project produces is designed to be run on Red Hat JBoss Enterprise Application Platform (EAP) 6.2 or later with the Red Hat JBoss Web Framework Kit (WFK) 2.5. 
 
-The application this project produces is designed to be run on Red Hat JBoss Enterprise Application Platform (EAP) 6.1 or later.
+All you need to build this project is Java 6.0 (Java SDK 1.6) or later, Maven 3.0 or later, and the RichFaces library.
 
 
 Configure Maven
@@ -45,10 +45,10 @@ Configure Maven
 If you have not yet done so, you must [Configure Maven](../README.md#configure-maven) before testing the quickstarts.
 
 
-Start the JBoss Server
+Start the JBoss EAP Server
 -------------------------
 
-1. Open a command line and navigate to the root of the JBoss server directory.
+1. Open a command line and navigate to the root of the JBoss EAP directory.
 2. The following shows the command line to start the server with the default profile:
 
         For Linux:   JBOSS_HOME/bin/standalone.sh
@@ -58,7 +58,9 @@ Start the JBoss Server
 Build and Deploy the Quickstart
 -------------------------
 
-1. Make sure you have started the JBoss Server as described above.
+_NOTE: The following build command assumes you have configured your Maven user settings. If you have not, you must include Maven setting arguments on the command line. See [Build and Deploy the Quickstarts](../README.md#build-and-deploy-the-quickstarts) for complete instructions and additional options._
+
+1. Make sure you have started the JBoss EAP server as described above.
 2. Open a command line and navigate to the root directory of this quickstart.
 3. Type this command to build and deploy the archive:
 
@@ -76,7 +78,7 @@ The application will be running at the following URL: <http://localhost:8080/${a
 Undeploy the Archive
 --------------------
 
-1. Make sure you have started the JBoss Server as described above.
+1. Make sure you have started the JBoss EAP server as described above.
 2. Open a command line and navigate to the root directory of this quickstart.
 3. When you are finished testing, type this command to undeploy the archive:
 
@@ -90,11 +92,34 @@ This quickstart provides Arquillian tests. By default, these tests are configure
 
 _NOTE: The following commands assume you have configured your Maven user settings. If you have not, you must include Maven setting arguments on the command line. See [Run the Arquillian Tests](../README.md#run-the-arquillian-tests) for complete instructions and additional options._
 
-1. Make sure you have started the JBoss Server as described above.
+1. Make sure you have started the JBoss EAP server as described above.
 2. Open a command line and navigate to the root directory of this quickstart.
 3. Type the following command to run the test goal with the following profile activated:
 
         mvn clean test -Parq-jbossas-remote
+
+
+Run the Arquillian Functional Tests
+-----------------------------------
+
+This quickstart provides Arquillian functional tests as well. They are located in the functional-tests/ subdirectory under the root directory of this quickstart.
+Functional tests verify that your application behaves correctly from the user's point of view. The tests open a browser instance, simulate clicking around the page as a normal user would do, and then close the browser instance.
+
+To run these tests, you must build the main project as described above.
+
+1. Open a command line and navigate to the root directory of this quickstart.
+2. Build the quickstart WAR using the following command:
+
+        mvn clean package
+
+3. Navigate to the functional-tests/ directory in this quickstart.
+4. If you have a running instance of the JBoss EAP server, as described above, run the remote tests by typing the following command:
+
+        mvn clean verify -Parq-jbossas-remote
+
+5. If you prefer to run the functional tests using managed instance of the JBoss EAP server, meaning the tests will start the server for you, type fhe following command:
+
+        mvn clean verify -Parq-jbossas-managed
 
 
 Run the Quickstart in JBoss Developer Studio or Eclipse

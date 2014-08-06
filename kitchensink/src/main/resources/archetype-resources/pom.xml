@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
     JBoss, Home of Professional Open Source
-    Copyright 2013, Red Hat, Inc. and/or its affiliates, and individual
+    Copyright 2014, Red Hat, Inc. and/or its affiliates, and individual
     contributors by the @authors tag. See the copyright.txt in the
     distribution for a full listing of individual contributors.
 
@@ -15,15 +15,14 @@
     See the License for the specific language governing permissions and
     limitations under the License.
 -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>${groupId}</groupId>
     <artifactId>${artifactId}</artifactId>
     <version>${version}</version>
     <packaging>war</packaging>
-    <name>${artifactId}</name>
+    <name>JBoss WFK Quickstart: ${artifactId}</name>
     <description>JBoss WFK Quickstart: Based on the ${artifactId} but adds RichFaces</description>
 
     <url>http://jboss.org/richfaces</url>
@@ -47,16 +46,10 @@
         <version.jboss.maven.plugin>7.4.Final</version.jboss.maven.plugin>
 
         <!-- Define the version of the JBoss BOMs we want to import to specify tested stacks. -->
-#if ($enterprise == "true" || $enterprise == "y" || $enterprise == "yes" )
-        <version.richfaces>${richfaces-enterprise-version}</version.richfaces>
-        <version.jboss.bom.eap>${jboss-bom-enterprise-version-eap}</version.jboss.bom.eap>
-        <version.jboss.bom.wfk>${jboss-bom-enterprise-version-wfk}</version.jboss.bom.wfk>
-#else
         <version.richfaces>${richfaces-version}</version.richfaces>
         <version.jboss.bom>${jboss-bom-version}</version.jboss.bom>
-#end
-        <org.ocpsoft.rewrite.version>1.0.4.Final</org.ocpsoft.rewrite.version>
-        
+        <org.ocpsoft.rewrite.version>2.0.12.Final</org.ocpsoft.rewrite.version>
+
         <!-- other plugin versions -->
         <version.surefire.plugin>2.10</version.surefire.plugin>
         <version.war.plugin>2.1.1</version.war.plugin>
@@ -76,22 +69,6 @@
                 tools for your project, such as Arquillian for testing) and the jboss-javaee-6.0-with-hibernate
                 stack you can read this as the JBoss stack of the Java EE 6 APIs, with extras
                 from the Hibernate family of projects) -->
-#if ($enterprise == "true" || $enterprise == "y" || $enterprise == "yes" )
-            <dependency>
-                <groupId>org.jboss.bom.wfk</groupId>
-                <artifactId>jboss-javaee-6.0-with-tools</artifactId>
-                <version>${version.jboss.bom.wfk}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-            <dependency>
-                <groupId>org.jboss.bom</groupId>
-                <artifactId>jboss-javaee-6.0-with-hibernate</artifactId>
-                <version>${version.jboss.bom.eap}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-#else
             <dependency>
                 <groupId>org.jboss.bom</groupId>
                 <artifactId>jboss-javaee-6.0-with-tools</artifactId>
@@ -106,7 +83,6 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-#end
         </dependencies>
     </dependencyManagement>
 
@@ -180,14 +156,14 @@
             <scope>provided</scope>
         </dependency>
 
-        <!-- Import the RichFaces core library -->
+        <!-- Import the RichFaces library -->
         <dependency>
             <groupId>org.richfaces</groupId>
             <artifactId>richfaces</artifactId>
             <version>${version.richfaces}</version>
         </dependency>
 
-        <!-- Import the Atmosphere framework for a4j:push -->
+        <!-- Import the RichFaces push dependencies -->
         <dependency>
             <groupId>org.richfaces</groupId>
             <artifactId>richfaces-push-depchain</artifactId>

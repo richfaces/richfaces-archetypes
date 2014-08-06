@@ -9,19 +9,7 @@
             <defaultValue>4.5.0-SNAPSHOT</defaultValue>
         </requiredProperty>
         <requiredProperty key="jboss-bom-version">
-            <defaultValue>1.0.6.Final</defaultValue>
-        </requiredProperty>
-        <requiredProperty key="enterprise">
-            <defaultValue>n</defaultValue>
-        </requiredProperty>
-        <requiredProperty key="richfaces-enterprise-version">
-            <defaultValue>4.5.0-SNAPSHOT-redhat-1</defaultValue>
-        </requiredProperty>
-        <requiredProperty key="jboss-bom-enterprise-version-eap">
-            <defaultValue>1.0.4.Final-redhat-9</defaultValue>
-        </requiredProperty>
-        <requiredProperty key="jboss-bom-enterprise-version-wfk">
-            <defaultValue>2.4.0-redhat-2</defaultValue>
+            <defaultValue>1.0.7.Final</defaultValue>
         </requiredProperty>
     </requiredProperties>
     <fileSets>
