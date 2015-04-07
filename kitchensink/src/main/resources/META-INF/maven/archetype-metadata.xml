@@ -6,7 +6,7 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <requiredProperties>
         <requiredProperty key="richfaces-version">
-            <defaultValue>4.5.4.Final</defaultValue>
+            <defaultValue>4.5.5-SNAPSHOT</defaultValue>
         </requiredProperty>
         <requiredProperty key="jboss-bom-version">
             <defaultValue>1.0.7.Final</defaultValue>
